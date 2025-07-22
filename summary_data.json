@@ -1,0 +1,1203 @@
+{
+  "overall": {
+    "total_campaigns": 15,
+    "total_sent": 1016928,
+    "total_impressions": 514059,
+    "total_clicked": 3934,
+    "time_frame": {
+      "start": "15 Jul 2025",
+      "end": "16 Jul 2025"
+    }
+  },
+  "campaigns": [
+    {
+      "campaign_id": 1752560378,
+      "campaign_name": "PN | 17:15 | CT - WB | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 63137,
+      "delivery_channel": "Push",
+      "delivery_time": "15 Jul, 05:15 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": "😊✅1 কেজি আলু আজ 1 টাকা!",
+      "body_text_1": "ভাবলেন ভুল পড়লেন? না, একদম সত্যি! এখনই কিনুন!😲",
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": "https://shop.apnamart.in/shop/?product_id=68780",
+      "headline_2": "😊✅1 কেজি আলু আজ 1 টাকা!",
+      "body_text_2": "ভাবলেন ভুল পড়লেন? না, একদম সত্যি! এখনই কিনুন!😲",
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 57914,
+          "impressions": 44161,
+          "clicked": 365,
+          "CTR": 0.8265211385611738,
+          "Error Rate": 1.00839175328936,
+          "errors": {
+            "global_frequency_caps_exceeded": 569,
+            "push_unreg": 15
+          },
+          "headline": "😊✅1 কেজি আলু আজ 1 টাকা!",
+          "body_text": "ভাবলেন ভুল পড়লেন? না, একদম সত্যি! এখনই কিনুন!😲",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": "https://shop.apnamart.in/shop/?product_id=68780"
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 4191,
+          "impressions": 0,
+          "clicked": 13,
+          "CTR": 0.0,
+          "Error Rate": 10.689572894297305,
+          "errors": {
+            "APNSBadDeviceToken": 353,
+            "global_frequency_caps_exceeded": 93,
+            "APNSDeviceTokenNotForTopic": 2
+          },
+          "headline": "😊✅1 কেজি আলু আজ 1 টাকা!",
+          "body_text": "ভাবলেন ভুল পড়লেন? না, একদম সত্যি! এখনই কিনুন!😲",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 0,
+          "impressions": 0,
+          "clicked": 9,
+          "CTR": 0.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": "😊✅1 কেজি আলু আজ 1 টাকা!",
+          "body_text": "ভাবলেন ভুল পড়লেন? না, একদম সত্যি! এখনই কিনুন!😲",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": "https://shop.apnamart.in/shop/?product_id=68780"
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752560604,
+      "campaign_name": "PN | 18:30 | Milk offer - JHCG | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 88002,
+      "delivery_channel": "Push",
+      "delivery_time": "15 Jul, 06:30 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": "🥛सिर्फ ₹19 में 500ml दूध!",
+      "body_text_1": "✨दूध पीजिए और पैसे भी बचाइए!",
+      "creative_type_1": "image",
+      "thumbnail_url_1": "https://d2xdgxd31vfz2r.cloudfront.net/1643916928/assets/8a4fb6b51bbd4b4a9d1412e55027eedd.jpeg",
+      "cta_text_1": "https://shop.apnamart.in/shop/?product_id=1971",
+      "headline_2": "🥛सिर्फ ₹19 में 500ml दूध!",
+      "body_text_2": "✨दूध पीजिए और पैसे भी बचाइए!",
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 78716,
+          "impressions": 64596,
+          "clicked": 435,
+          "CTR": 0.673416310607468,
+          "Error Rate": 0.6707657909446618,
+          "errors": {
+            "global_frequency_caps_exceeded": 477,
+            "push_unreg": 51
+          },
+          "headline": "🥛सिर्फ ₹19 में 500ml दूध!",
+          "body_text": "✨दूध पीजिए और पैसे भी बचाइए!",
+          "creative_type": "image",
+          "thumbnail_url": "https://d2xdgxd31vfz2r.cloudfront.net/1643916928/assets/8a4fb6b51bbd4b4a9d1412e55027eedd.jpeg",
+          "cta_text": "https://shop.apnamart.in/shop/?product_id=1971"
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 8316,
+          "impressions": 0,
+          "clicked": 25,
+          "CTR": 0.0,
+          "Error Rate": 5.315055315055315,
+          "errors": {
+            "APNSBadDeviceToken": 389,
+            "global_frequency_caps_exceeded": 50,
+            "APNSDeviceTokenNotForTopic": 3
+          },
+          "headline": "🥛सिर्फ ₹19 में 500ml दूध!",
+          "body_text": "✨दूध पीजिए और पैसे भी बचाइए!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 0,
+          "impressions": 0,
+          "clicked": 7,
+          "CTR": 0.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": "🥛सिर्फ ₹19 में 500ml दूध!",
+          "body_text": "✨दूध पीजिए और पैसे भी बचाइए!",
+          "creative_type": "image",
+          "thumbnail_url": "https://d2xdgxd31vfz2r.cloudfront.net/1643916928/assets/8a4fb6b51bbd4b4a9d1412e55027eedd.jpeg",
+          "cta_text": "https://shop.apnamart.in/shop/?product_id=1971"
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752560868,
+      "campaign_name": "PN | 18:40 | Milk offer - WB | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 34024,
+      "delivery_channel": "Push",
+      "delivery_time": "15 Jul, 06:40 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": "19 টাকায় নিন 500 ml দুধ!🥛",
+      "body_text_1": "🥛💪জলের দরে দুধের পুষ্টি!",
+      "creative_type_1": "image",
+      "thumbnail_url_1": "https://d2xdgxd31vfz2r.cloudfront.net/1643916928/assets/f13596b3c1564ba38198111850564332.jpeg",
+      "cta_text_1": "https://shop.apnamart.in/shop/?product_id=2059",
+      "headline_2": "19 টাকায় নিন 500 ml দুধ!🥛",
+      "body_text_2": "🥛💪জলের দরে দুধের পুষ্টি!",
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 31541,
+          "impressions": 26144,
+          "clicked": 164,
+          "CTR": 0.6272949816401469,
+          "Error Rate": 1.112837259440094,
+          "errors": {
+            "global_frequency_caps_exceeded": 329,
+            "push_unreg": 22
+          },
+          "headline": "19 টাকায় নিন 500 ml দুধ!🥛",
+          "body_text": "🥛💪জলের দরে দুধের পুষ্টি!",
+          "creative_type": "image",
+          "thumbnail_url": "https://d2xdgxd31vfz2r.cloudfront.net/1643916928/assets/f13596b3c1564ba38198111850564332.jpeg",
+          "cta_text": "https://shop.apnamart.in/shop/?product_id=2059"
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 1975,
+          "impressions": 0,
+          "clicked": 1,
+          "CTR": 0.0,
+          "Error Rate": 7.949367088607595,
+          "errors": {
+            "APNSBadDeviceToken": 105,
+            "global_frequency_caps_exceeded": 51,
+            "APNSDeviceTokenNotForTopic": 1
+          },
+          "headline": "19 টাকায় নিন 500 ml দুধ!🥛",
+          "body_text": "🥛💪জলের দরে দুধের পুষ্টি!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752560978,
+      "campaign_name": "PN | 19:30 | CT - JHCG | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 162400,
+      "delivery_channel": "Push",
+      "delivery_time": "15 Jul, 07:30 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": "🛒 ₹1 में उपवास की पूरी थाली तैयार!",
+      "body_text_1": "साबूदाना, मूंगफली, सेंधा नमक, अमूल मस्ती दही – सब ApnaMart पर उपलब्ध!\nऑफर सिर्फ आज के लिए",
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": null,
+      "headline_2": "🛒 ₹1 में उपवास की पूरी थाली तैयार!",
+      "body_text_2": "साबूदाना, मूंगफली, सेंधा नमक, अमूल मस्ती दही – सब ApnaMart पर उपलब्ध!\nऑफर सिर्फ आज के लिए",
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 143369,
+          "impressions": 107259,
+          "clicked": 767,
+          "CTR": 0.7150915074725663,
+          "Error Rate": 0.7784109535534182,
+          "errors": {
+            "push_unreg": 92,
+            "global_frequency_caps_exceeded": 1024
+          },
+          "headline": "🛒 ₹1 में उपवास की पूरी थाली तैयार!",
+          "body_text": "साबूदाना, मूंगफली, सेंधा नमक, अमूल मस्ती दही – सब ApnaMart पर उपलब्ध!\nऑफर सिर्फ आज के लिए",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 16265,
+          "impressions": 0,
+          "clicked": 51,
+          "CTR": 0.0,
+          "Error Rate": 10.144482016600062,
+          "errors": {
+            "APNSBadDeviceToken": 1513,
+            "APNSDeviceTokenNotForTopic": 7,
+            "global_frequency_caps_exceeded": 129,
+            "apns_failed_delivery": 1
+          },
+          "headline": "🛒 ₹1 में उपवास की पूरी थाली तैयार!",
+          "body_text": "साबूदाना, मूंगफली, सेंधा नमक, अमूल मस्ती दही – सब ApnaMart पर उपलब्ध!\nऑफर सिर्फ आज के लिए",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 0,
+          "impressions": 2,
+          "clicked": 20,
+          "CTR": 1000.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": "🛒 ₹1 में उपवास की पूरी थाली तैयार!",
+          "body_text": "साबूदाना, मूंगफली, सेंधा नमक, अमूल मस्ती दही – सब ApnaMart पर उपलब्ध!\nऑफर सिर्फ आज के लिए",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752561054,
+      "campaign_name": "PN | 19:40 | CT - WB | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 63429,
+      "delivery_channel": "Push",
+      "delivery_time": "15 Jul, 07:40 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": "উপোসের খাবার যদি ₹1-এ পান?🧘‍♀️🍛",
+      "body_text_1": "🏃‍♂️📦JK Sabudana Small Moti 250g, চিনেবাদাম, সন্ধক নুন, আমুল মস্তি দই - এখনই কিনুন পরের সোমবারের জন্য!",
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": null,
+      "headline_2": "উপোসের খাবার যদি ₹1-এ পান?🧘‍♀️🍛",
+      "body_text_2": "🏃‍♂️📦JK Sabudana Small Moti 250g, চিনেবাদাম, সন্ধক নুন, আমুল মস্তি দই - এখনই কিনুন পরের সোমবারের জন্য!",
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 58304,
+          "impressions": 44964,
+          "clicked": 184,
+          "CTR": 0.40921626189840765,
+          "Error Rate": 0.7889681668496159,
+          "errors": {
+            "global_frequency_caps_exceeded": 423,
+            "push_unreg": 37
+          },
+          "headline": "উপোসের খাবার যদি ₹1-এ পান?🧘‍♀️🍛",
+          "body_text": "🏃‍♂️📦JK Sabudana Small Moti 250g, চিনেবাদাম, সন্ধক নুন, আমুল মস্তি দই - এখনই কিনুন পরের সোমবারের জন্য!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 4245,
+          "impressions": 0,
+          "clicked": 11,
+          "CTR": 0.0,
+          "Error Rate": 9.89399293286219,
+          "errors": {
+            "APNSBadDeviceToken": 354,
+            "global_frequency_caps_exceeded": 63,
+            "APNSDeviceTokenNotForTopic": 3
+          },
+          "headline": "উপোসের খাবার যদি ₹1-এ পান?🧘‍♀️🍛",
+          "body_text": "🏃‍♂️📦JK Sabudana Small Moti 250g, চিনেবাদাম, সন্ধক নুন, আমুল মস্তি দই - এখনই কিনুন পরের সোমবারের জন্য!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 0,
+          "impressions": 1,
+          "clicked": 9,
+          "CTR": 900.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": "উপোসের খাবার যদি ₹1-এ পান?🧘‍♀️🍛",
+          "body_text": "🏃‍♂️📦JK Sabudana Small Moti 250g, চিনেবাদাম, সন্ধক নুন, আমুল মস্তি দই - এখনই কিনুন পরের সোমবারের জন্য!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752561119,
+      "campaign_name": "PN | 20:50 | CT - WB | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 63563,
+      "delivery_channel": "Push",
+      "delivery_time": "15 Jul, 08:50 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": "আজ ₹1-এ অনেক কিছু পাওয়া যাচ্ছে!",
+      "body_text_1": "🕚🛍️এখনও সময় আছে একটু! স্টোর খোলা রাত 11টা পর্যন্ত! তাড়াতাড়ি অর্ডার দিন!",
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": null,
+      "headline_2": "আজ ₹1-এ অনেক কিছু পাওয়া যাচ্ছে!",
+      "body_text_2": "🕚🛍️এখনও সময় আছে একটু! স্টোর খোলা রাত 11টা পর্যন্ত! তাড়াতাড়ি অর্ডার দিন!",
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 58563,
+          "impressions": 44757,
+          "clicked": 297,
+          "CTR": 0.6635833500904886,
+          "Error Rate": 0.5105612758909208,
+          "errors": {
+            "global_frequency_caps_exceeded": 254,
+            "push_unreg": 45
+          },
+          "headline": "আজ ₹1-এ অনেক কিছু পাওয়া যাচ্ছে!",
+          "body_text": "🕚🛍️এখনও সময় আছে একটু! স্টোর খোলা রাত 11টা পর্যন্ত! তাড়াতাড়ি অর্ডার দিন!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 4288,
+          "impressions": 0,
+          "clicked": 12,
+          "CTR": 0.0,
+          "Error Rate": 9.631529850746269,
+          "errors": {
+            "APNSBadDeviceToken": 359,
+            "global_frequency_caps_exceeded": 49,
+            "APNSDeviceTokenNotForTopic": 4,
+            "apns_failed_delivery": 1
+          },
+          "headline": "আজ ₹1-এ অনেক কিছু পাওয়া যাচ্ছে!",
+          "body_text": "🕚🛍️এখনও সময় আছে একটু! স্টোর খোলা রাত 11টা পর্যন্ত! তাড়াতাড়ি অর্ডার দিন!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 0,
+          "impressions": 0,
+          "clicked": 19,
+          "CTR": 0.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": "আজ ₹1-এ অনেক কিছু পাওয়া যাচ্ছে!",
+          "body_text": "🕚🛍️এখনও সময় আছে একটু! স্টোর খোলা রাত 11টা পর্যন্ত! তাড়াতাড়ি অর্ডার দিন!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752561278,
+      "campaign_name": "PN | 20:45 | CT - JHCG | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 162211,
+      "delivery_channel": "Push",
+      "delivery_time": "15 Jul, 08:45 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": "⏳Crazy Tuesday ऑफर का टाइम खत्म",
+      "body_text_1": "– हो रहा है!अभी भी समय है – स्टोर खुला है रात 11 बजे तक, जल्दी ऑर्डर करें!",
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": null,
+      "headline_2": "⏳Crazy Tuesday ऑफर का टाइम खत्म",
+      "body_text_2": "– हो रहा है!अभी भी समय है – स्टोर खुला है रात 11 बजे तक, जल्दी ऑर्डर करें!",
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 142854,
+          "impressions": 105410,
+          "clicked": 437,
+          "CTR": 0.414571672516839,
+          "Error Rate": 1.036022792501435,
+          "errors": {
+            "global_frequency_caps_exceeded": 1392,
+            "push_unreg": 88
+          },
+          "headline": "⏳Crazy Tuesday ऑफर का टाइम खत्म",
+          "body_text": "– हो रहा है!अभी भी समय है – स्टोर खुला है रात 11 बजे तक, जल्दी ऑर्डर करें!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 16145,
+          "impressions": 0,
+          "clicked": 31,
+          "CTR": 0.0,
+          "Error Rate": 10.727779498296686,
+          "errors": {
+            "APNSBadDeviceToken": 1506,
+            "global_frequency_caps_exceeded": 193,
+            "APNSDeviceTokenNotForTopic": 6,
+            "apns_toomany_same_token": 27
+          },
+          "headline": "⏳Crazy Tuesday ऑफर का टाइम खत्म",
+          "body_text": "– हो रहा है!अभी भी समय है – स्टोर खुला है रात 11 बजे तक, जल्दी ऑर्डर करें!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 0,
+          "impressions": 2,
+          "clicked": 23,
+          "CTR": 1150.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": "⏳Crazy Tuesday ऑफर का टाइम खत्म",
+          "body_text": "– हो रहा है!अभी भी समय है – स्टोर खुला है रात 11 बजे तक, जल्दी ऑर्डर करें!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 0,
+          "impressions": 0,
+          "clicked": 1,
+          "CTR": 0.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": "⏳Crazy Tuesday ऑफर का टाइम खत्म",
+          "body_text": "– हो रहा है!अभी भी समय है – स्टोर खुला है रात 11 बजे तक, जल्दी ऑर्डर करें!",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752579411,
+      "campaign_name": "SMS | 17:05 | CT--JH | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 183706,
+      "delivery_channel": "Sms",
+      "delivery_time": "15 Jul, 05:06 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": null,
+      "body_text_1": null,
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": null,
+      "headline_2": null,
+      "body_text_2": null,
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 0,
+          "platform": "Channel 0",
+          "sent": 183592,
+          "impressions": 0,
+          "clicked": 0,
+          "CTR": 0.0,
+          "Error Rate": 0.06209420889799119,
+          "errors": {
+            "global_frequency_caps_exceeded": 114
+          },
+          "headline": null,
+          "body_text": null,
+          "creative_type": null,
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752579587,
+      "campaign_name": "SMS | 17:10 | CT--WB | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 87895,
+      "delivery_channel": "Sms",
+      "delivery_time": "15 Jul, 05:09 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": null,
+      "body_text_1": null,
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": null,
+      "headline_2": null,
+      "body_text_2": null,
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 0,
+          "platform": "Channel 0",
+          "sent": 87886,
+          "impressions": 0,
+          "clicked": 0,
+          "CTR": 0.0,
+          "Error Rate": 0.010240538879912615,
+          "errors": {
+            "global_frequency_caps_exceeded": 9
+          },
+          "headline": null,
+          "body_text": null,
+          "creative_type": null,
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752579992,
+      "campaign_name": "inapp_mt_post_order_jhcg_150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 0,
+      "delivery_channel": "InApp",
+      "delivery_time": "15 Jul, 05:16 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": null,
+      "body_text_1": null,
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": null,
+      "headline_2": null,
+      "body_text_2": null,
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 174,
+          "impressions": 0,
+          "clicked": 148,
+          "CTR": 0.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": null,
+          "body_text": null,
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 116,
+          "impressions": 0,
+          "clicked": 94,
+          "CTR": 0.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": null,
+          "body_text": null,
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752582118,
+      "campaign_name": "inapp_mt_post_order_wb_150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 0,
+      "delivery_channel": "InApp",
+      "delivery_time": "15 Jul, 05:51 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": null,
+      "body_text_1": null,
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": null,
+      "headline_2": null,
+      "body_text_2": null,
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 61,
+          "impressions": 0,
+          "clicked": 54,
+          "CTR": 0.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": null,
+          "body_text": null,
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 23,
+          "impressions": 0,
+          "clicked": 22,
+          "CTR": 0.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": null,
+          "body_text": null,
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752585063,
+      "campaign_name": "WA | 18:40 | CT-PURCHASE-JHCG | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "All Users",
+      "language": null,
+      "audience_size": 1290,
+      "delivery_channel": "WhatsApp",
+      "delivery_time": "15 Jul, 06:41 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": null,
+      "body_text_1": null,
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": null,
+      "headline_2": null,
+      "body_text_2": null,
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 0,
+          "platform": "Channel 0",
+          "sent": 1290,
+          "impressions": 0,
+          "clicked": 0,
+          "CTR": 0.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": null,
+          "body_text": null,
+          "creative_type": null,
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752585905,
+      "campaign_name": "WA | 18:50 | CT-PURCHASE-WB | 150725",
+      "date_sent": "2025-07-15",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "All Users",
+      "language": null,
+      "audience_size": 1002,
+      "delivery_channel": "WhatsApp",
+      "delivery_time": "15 Jul, 06:55 PM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": null,
+      "body_text_1": null,
+      "creative_type_1": "text-only",
+      "thumbnail_url_1": null,
+      "cta_text_1": null,
+      "headline_2": null,
+      "body_text_2": null,
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 0,
+          "platform": "Channel 0",
+          "sent": 1002,
+          "impressions": 0,
+          "clicked": 0,
+          "CTR": 0.0,
+          "Error Rate": 0.0,
+          "errors": {},
+          "headline": null,
+          "body_text": null,
+          "creative_type": null,
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752606016,
+      "campaign_name": "PN | 07:15 | Milk offer - JHCG | 160725",
+      "date_sent": "2025-07-16",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 84034,
+      "delivery_channel": "Push",
+      "delivery_time": "16 Jul, 07:15 AM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": "500ml दूध ₹19 में!",
+      "body_text_1": "🌅 हेल्दी मॉर्निंग, सस्ता दूध",
+      "creative_type_1": "image",
+      "thumbnail_url_1": "https://d2xdgxd31vfz2r.cloudfront.net/1643916928/assets/8a4fb6b51bbd4b4a9d1412e55027eedd.jpeg",
+      "cta_text_1": "https://shop.apnamart.in/shop/?product_id=1971",
+      "headline_2": "500ml दूध ₹19 में!",
+      "body_text_2": "🌅 हेल्दी मॉर्निंग, सस्ता दूध",
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 75257,
+          "impressions": 54556,
+          "clicked": 473,
+          "CTR": 0.8669990468509421,
+          "Error Rate": 0.34282525213601395,
+          "errors": {
+            "global_frequency_caps_exceeded": 231,
+            "push_unreg": 27
+          },
+          "headline": "500ml दूध ₹19 में!",
+          "body_text": "🌅 हेल्दी मॉर्निंग, सस्ता दूध",
+          "creative_type": "image",
+          "thumbnail_url": "https://d2xdgxd31vfz2r.cloudfront.net/1643916928/assets/8a4fb6b51bbd4b4a9d1412e55027eedd.jpeg",
+          "cta_text": "https://shop.apnamart.in/shop/?product_id=1971"
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 8036,
+          "impressions": 0,
+          "clicked": 37,
+          "CTR": 0.0,
+          "Error Rate": 6.010452961672474,
+          "errors": {
+            "APNSBadDeviceToken": 393,
+            "global_frequency_caps_exceeded": 87,
+            "APNSDeviceTokenNotForTopic": 3
+          },
+          "headline": "500ml दूध ₹19 में!",
+          "body_text": "🌅 हेल्दी मॉर्निंग, सस्ता दूध",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    },
+    {
+      "campaign_id": 1752606137,
+      "campaign_name": "PN | 07:30 | Milk offer - WB | 160725",
+      "date_sent": "2025-07-16",
+      "region": null,
+      "segment_id": "adhoc",
+      "segment_name": "New Segment",
+      "language": null,
+      "audience_size": 33006,
+      "delivery_channel": "Push",
+      "delivery_time": "16 Jul, 07:30 AM",
+      "control_group_used": null,
+      "ab_test_variants": null,
+      "campaign_theme": null,
+      "product_skus_included": null,
+      "time_to_configure": null,
+      "targeting_strategy": null,
+      "personalization_type": null,
+      "headline_1": "🔊 আজকের তাজা খবর!🥛",
+      "body_text_1": "মাত্র 19 টাকায় 500 ml দুধ!💥",
+      "creative_type_1": "image",
+      "thumbnail_url_1": "https://d2xdgxd31vfz2r.cloudfront.net/1643916928/assets/f13596b3c1564ba38198111850564332.jpeg",
+      "cta_text_1": "https://shop.apnamart.in/shop/?product_id=2059",
+      "headline_2": "🔊 আজকের তাজা খবর!🥛",
+      "body_text_2": "মাত্র 19 টাকায় 500 ml দুধ!💥",
+      "creative_type_2": "text-only",
+      "thumbnail_url_2": null,
+      "cta_text_2": null,
+      "channels": [
+        {
+          "channel": 1,
+          "platform": "Android",
+          "sent": 30845,
+          "impressions": 22207,
+          "clicked": 218,
+          "CTR": 0.9816724456252532,
+          "Error Rate": 0.20424704165991248,
+          "errors": {
+            "global_frequency_caps_exceeded": 54,
+            "push_unreg": 9
+          },
+          "headline": "🔊 আজকের তাজা খবর!🥛",
+          "body_text": "মাত্র 19 টাকায় 500 ml দুধ!💥",
+          "creative_type": "image",
+          "thumbnail_url": "https://d2xdgxd31vfz2r.cloudfront.net/1643916928/assets/f13596b3c1564ba38198111850564332.jpeg",
+          "cta_text": "https://shop.apnamart.in/shop/?product_id=2059"
+        },
+        {
+          "channel": 2,
+          "platform": "iPhone",
+          "sent": 1960,
+          "impressions": 0,
+          "clicked": 7,
+          "CTR": 0.0,
+          "Error Rate": 7.040816326530612,
+          "errors": {
+            "APNSBadDeviceToken": 109,
+            "global_frequency_caps_exceeded": 29
+          },
+          "headline": "🔊 আজকের তাজা খবর!🥛",
+          "body_text": "মাত্র 19 টাকায় 500 ml দুধ!💥",
+          "creative_type": "text-only",
+          "thumbnail_url": null,
+          "cta_text": null
+        }
+      ]
+    }
+  ],
+  "ctr_by_campaign": [
+    {
+      "campaign_name": "PN | 07:30 | Milk offer - WB | 160725",
+      "CTR": 0.9816724456252532
+    },
+    {
+      "campaign_name": "PN | 07:30 | Milk offer - WB | 160725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 07:15 | Milk offer - JHCG | 160725",
+      "CTR": 0.8669990468509421
+    },
+    {
+      "campaign_name": "PN | 07:15 | Milk offer - JHCG | 160725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 20:50 | CT - WB | 150725",
+      "CTR": 0.6635833500904886
+    },
+    {
+      "campaign_name": "PN | 20:50 | CT - WB | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 20:50 | CT - WB | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 20:45 | CT - JHCG | 150725",
+      "CTR": 0.414571672516839
+    },
+    {
+      "campaign_name": "PN | 20:45 | CT - JHCG | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 20:45 | CT - JHCG | 150725",
+      "CTR": 1150.0
+    },
+    {
+      "campaign_name": "PN | 20:45 | CT - JHCG | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 19:40 | CT - WB | 150725",
+      "CTR": 0.40921626189840765
+    },
+    {
+      "campaign_name": "PN | 19:40 | CT - WB | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 19:40 | CT - WB | 150725",
+      "CTR": 900.0
+    },
+    {
+      "campaign_name": "PN | 19:30 | CT - JHCG | 150725",
+      "CTR": 0.7150915074725663
+    },
+    {
+      "campaign_name": "PN | 19:30 | CT - JHCG | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 19:30 | CT - JHCG | 150725",
+      "CTR": 1000.0
+    },
+    {
+      "campaign_name": "WA | 18:50 | CT-PURCHASE-WB | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "WA | 18:40 | CT-PURCHASE-JHCG | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 18:40 | Milk offer - WB | 150725",
+      "CTR": 0.6272949816401469
+    },
+    {
+      "campaign_name": "PN | 18:40 | Milk offer - WB | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 18:30 | Milk offer - JHCG | 150725",
+      "CTR": 0.673416310607468
+    },
+    {
+      "campaign_name": "PN | 18:30 | Milk offer - JHCG | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 18:30 | Milk offer - JHCG | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "inapp_mt_post_order_wb_150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "inapp_mt_post_order_wb_150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "inapp_mt_post_order_jhcg_150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "inapp_mt_post_order_jhcg_150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 17:15 | CT - WB | 150725",
+      "CTR": 0.8265211385611738
+    },
+    {
+      "campaign_name": "PN | 17:15 | CT - WB | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "PN | 17:15 | CT - WB | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "SMS | 17:10 | CT--WB | 150725",
+      "CTR": 0.0
+    },
+    {
+      "campaign_name": "SMS | 17:05 | CT--JH | 150725",
+      "CTR": 0.0
+    }
+  ],
+  "error_breakdown": [
+    {
+      "error_type": "global_frequency_caps_exceeded",
+      "count": 5620
+    },
+    {
+      "error_type": "push_unreg",
+      "count": 386
+    },
+    {
+      "error_type": "APNSBadDeviceToken",
+      "count": 5081
+    },
+    {
+      "error_type": "APNSDeviceTokenNotForTopic",
+      "count": 29
+    },
+    {
+      "error_type": "apns_failed_delivery",
+      "count": 2
+    },
+    {
+      "error_type": "apns_toomany_same_token",
+      "count": 27
+    }
+  ]
+}

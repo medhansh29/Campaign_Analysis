@@ -1,0 +1,53 @@
+[
+    {
+      "type": "text",
+      "content": "## Executive Summary\n\nThis report analyzes two recent push notification campaigns targeting 33,006 users. Key highlights:\n\n- Total Clicks: 232\n- Highest CTR: 1.01% (Milk Offer - WB)\n- Flash Sale had full delivery but very low engagement.\n\nA score was assigned to each campaign based on engagement and error metrics."
+    },
+    {
+      "type": "table",
+      "title": "Campaign Performance Scorecard",
+      "headers": ["Campaign", "CTR", "Impression Rate", "Error Rate", "Clicks", "Score (/100)"],
+      "rows": [
+        ["Milk Offer - WB", "1.01%", "67.7%", "0.20%", "225", "88"],
+        ["Flash Sale - App Push", "0.36%", "100%", "7.04%", "7", "52"]
+      ]
+    },
+    {
+      "type": "text",
+      "content": "### Analysis — Milk Offer - WB\n- High CTR and strong engagement efficiency.\n- Errors were minimal and mostly due to frequency capping.\n- Content was regionally targeted and included image + CTA.\n\n### Analysis — Flash Sale - App Push\n- Despite perfect delivery, CTR and engagement were low.\n- Very high error rate (109 invalid iOS tokens).\n- Likely reasons: poor content fit, no CTA link, or misalignment with user interest."
+    },
+    {
+      "type": "chart",
+      "title": "CTR by Campaign",
+      "chart_type": "bar",
+      "x": ["Milk Offer - WB", "Flash Sale - App Push"],
+      "y": [1.01, 0.36],
+      "xlabel": "Campaign",
+      "ylabel": "CTR (%)"
+    },
+    {
+      "type": "chart",
+      "title": "Engagement Funnel — Milk Offer - WB",
+      "chart_type": "line",
+      "x": ["Sent", "Impressions", "Clicks"],
+      "y": [32805, 22207, 225],
+      "xlabel": "Stage",
+      "ylabel": "Users"
+    },
+    {
+      "type": "table",
+      "title": "Error Breakdown",
+      "headers": ["Campaign", "Error Type", "Count"],
+      "rows": [
+        ["Milk Offer - WB", "Global Frequency Cap", "54"],
+        ["Milk Offer - WB", "Push Unregistered", "9"],
+        ["Flash Sale - App Push", "APNS Bad Device Token", "109"],
+        ["Flash Sale - App Push", "Global Frequency Cap", "29"]
+      ]
+    },
+    {
+      "type": "text",
+      "content": "## Final Observations\n\n- Campaign design, audience selection, and device hygiene **directly impact performance**.\n- Use this report to optimize creative strategy, reduce delivery errors, and boost user interaction in upcoming campaigns."
+    }
+  ]
+  
