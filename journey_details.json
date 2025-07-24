@@ -1,0 +1,2476 @@
+[
+  {
+    "journey_id": "322",
+    "data": {
+      "root": [
+        {
+          "percentage": 100,
+          "path": {
+            "segment_action": {
+              "key": "segment_action",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 2120,
+                  "step_id": 2,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 1,
+                    "from": null,
+                    "to": "segment_action"
+                  }
+                }
+              ],
+              "segment": true,
+              "message": false,
+              "stats": {
+                "qualified": 94,
+                "not_qualified": 0,
+                "fe": {},
+                "pu": {},
+                "sp": {},
+                "control_group": 0
+              }
+            },
+            "message_whatsapp": {
+              "key": "message_whatsapp",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 2121,
+                  "step_id": 4,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 3,
+                    "from": "segment_action",
+                    "to": "message_whatsapp"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": true,
+              "stats": {
+                "sent": 89,
+                "viewed": 17,
+                "clicked": 0,
+                "errors": 0,
+                "profile_not_reachable": 0,
+                "missing_platform_id": 0,
+                "DNDSet": 5,
+                "PurgedDueToCampaignDnd": 0,
+                "errors_urp": 5,
+                "control_group": 0,
+                "system_control_group": 0,
+                "sent_store": 0,
+                "unique_viewed": 0,
+                "unique_clicked": 0,
+                "delivered": 45,
+                "unique_delivered": 0,
+                "fe": {
+                  "3": 94
+                }
+              }
+            },
+            "force_exit": {
+              "key": "force_exit",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 2122,
+                  "step_id": 8,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 5,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 2124,
+                  "step_id": 10,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 7,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 2123,
+                  "step_id": 9,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_reachable"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 6,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            }
+          }
+        }
+      ],
+      "exit_stats": {},
+      "exit_key_map": {
+        "11": "segment_action"
+      },
+      "cg_stats": {
+        "entryType": "Live",
+        "createdOn": 1753165939187,
+        "createdBy": "satyajeet.kumar@apnamart.in",
+        "publishedOn": 1753165939187,
+        "c-by": "satyajeet.kumar@apnamart.in",
+        "status": "Running",
+        "comment": "",
+        "_id": 322,
+        "tagIdList": null,
+        "name": "CT_ORDER_PLACED_GIFT_JHCG_FINAL",
+        "newJourneyUI": true,
+        "startTime": "Jul 22, 12:02 PM",
+        "endTime": "Never End",
+        "stopped": false,
+        "published": true,
+        "paused": false,
+        "cloneable": true,
+        "hidden": false,
+        "goal": 0,
+        "exits": "N/A",
+        "conversion": "0",
+        "conversionCount": 0,
+        "conversionCG": "0",
+        "conversionCGCount": 0,
+        "conversionSCG": "0",
+        "conversionSCGCount": 0,
+        "goalSet": "Yes",
+        "entries": {
+          "qualified": 94
+        },
+        "timeout": 0,
+        "hasSCG": false,
+        "hasCG": false,
+        "accountHasSCG": true,
+        "campaignDisabledCGMidway": false,
+        "campaignDisabledCGMidwayTS": -1,
+        "campaignDisabledSCGMidway": false,
+        "campaignDisabledSCGMidwayTS": -1
+      },
+      "exit_node_map": {
+        "segment_action": {
+          "step_id": 11,
+          "display_step_id": 1
+        }
+      },
+      "success": true
+    }
+  },
+  {
+    "journey_id": "323",
+    "data": {
+      "root": [
+        {
+          "percentage": 100,
+          "path": {
+            "segment_action": {
+              "key": "segment_action",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 2127,
+                  "step_id": 2,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 1,
+                    "from": null,
+                    "to": "segment_action"
+                  }
+                }
+              ],
+              "segment": true,
+              "message": false,
+              "stats": {
+                "qualified": 24,
+                "not_qualified": 0,
+                "fe": {},
+                "pu": {},
+                "sp": {},
+                "control_group": 0
+              }
+            },
+            "message_whatsapp": {
+              "key": "message_whatsapp",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 2128,
+                  "step_id": 4,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 3,
+                    "from": "segment_action",
+                    "to": "message_whatsapp"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": true,
+              "stats": {
+                "sent": 21,
+                "viewed": 5,
+                "clicked": 0,
+                "errors": 0,
+                "profile_not_reachable": 0,
+                "missing_platform_id": 0,
+                "DNDSet": 2,
+                "PurgedDueToCampaignDnd": 0,
+                "errors_urp": 2,
+                "control_group": 0,
+                "system_control_group": 0,
+                "sent_store": 0,
+                "unique_viewed": 0,
+                "unique_clicked": 0,
+                "delivered": 12,
+                "unique_delivered": 0,
+                "fe": {
+                  "3": 23
+                }
+              }
+            },
+            "force_exit": {
+              "key": "force_exit",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 2129,
+                  "step_id": 8,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 5,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 2131,
+                  "step_id": 10,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 7,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 2130,
+                  "step_id": 9,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_reachable"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 6,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            }
+          }
+        }
+      ],
+      "exit_stats": {
+        "goal": {
+          "3": {
+            "11": {
+              "_id": 2132,
+              "segment_type": "Action",
+              "customName": "My segment",
+              "step_id": 11,
+              "cnt": 1
+            }
+          }
+        }
+      },
+      "exit_key_map": {
+        "11": "segment_action"
+      },
+      "cg_stats": {
+        "entryType": "Live",
+        "createdOn": 1753166058422,
+        "createdBy": "satyajeet.kumar@apnamart.in",
+        "publishedOn": 1753166058422,
+        "c-by": "satyajeet.kumar@apnamart.in",
+        "status": "Running",
+        "comment": "",
+        "_id": 323,
+        "tagIdList": null,
+        "name": "CT_ORDER_PLACED_GIFT_WB_FINAL",
+        "newJourneyUI": true,
+        "startTime": "Jul 22, 12:04 PM",
+        "endTime": "Never End",
+        "stopped": false,
+        "published": true,
+        "paused": false,
+        "cloneable": true,
+        "hidden": false,
+        "goal": 1,
+        "exits": "N/A",
+        "conversion": "4.17",
+        "conversionCount": 1,
+        "conversionCG": "0",
+        "conversionCGCount": 0,
+        "conversionSCG": "0",
+        "conversionSCGCount": 0,
+        "goalSet": "Yes",
+        "entries": {
+          "qualified": 24
+        },
+        "timeout": 0,
+        "hasSCG": false,
+        "hasCG": false,
+        "accountHasSCG": true,
+        "campaignDisabledCGMidway": false,
+        "campaignDisabledCGMidwayTS": -1,
+        "campaignDisabledSCGMidway": false,
+        "campaignDisabledSCGMidwayTS": -1
+      },
+      "exit_node_map": {
+        "segment_action": {
+          "step_id": 11,
+          "display_step_id": 1
+        }
+      },
+      "success": true
+    }
+  },
+  {
+    "journey_id": "325",
+    "data": {
+      "root": [
+        {
+          "percentage": 100,
+          "path": {
+            "segment_action": {
+              "key": "segment_action",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 6391,
+                  "step_id": 2,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 1,
+                    "from": null,
+                    "to": "segment_action"
+                  }
+                }
+              ],
+              "segment": true,
+              "message": false,
+              "stats": {
+                "qualified": 65,
+                "not_qualified": 0,
+                "fe": {},
+                "pu": {},
+                "sp": {},
+                "control_group": 0
+              }
+            },
+            "message_whatsapp": {
+              "key": "message_whatsapp",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 6392,
+                  "step_id": 4,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 3,
+                    "from": "segment_action",
+                    "to": "message_whatsapp"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": true,
+              "stats": {
+                "sent": 34,
+                "viewed": 1,
+                "clicked": 0,
+                "errors": 0,
+                "profile_not_reachable": 0,
+                "missing_platform_id": 0,
+                "DNDSet": 0,
+                "PurgedDueToCampaignDnd": 0,
+                "errors_urp": 0,
+                "control_group": 0,
+                "system_control_group": 0,
+                "sent_store": 0,
+                "unique_viewed": 0,
+                "unique_clicked": 0,
+                "delivered": 7,
+                "unique_delivered": 0,
+                "fe": {
+                  "3": 34
+                }
+              }
+            },
+            "force_exit": {
+              "key": "force_exit",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 6393,
+                  "step_id": 8,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 5,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 6395,
+                  "step_id": 10,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 7,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 6394,
+                  "step_id": 9,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_reachable"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 6,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            }
+          }
+        }
+      ],
+      "exit_stats": {},
+      "exit_key_map": {
+        "11": "segment_action"
+      },
+      "cg_stats": {
+        "entryType": "Live",
+        "createdOn": 1753169972935,
+        "createdBy": "satyajeet.kumar@apnamart.in",
+        "publishedOn": 1753169972935,
+        "c-by": "satyajeet.kumar@apnamart.in",
+        "status": "Running",
+        "comment": "",
+        "_id": 325,
+        "tagIdList": null,
+        "name": "CT_PURCHASE_GIFT_JHCG_FINAL",
+        "newJourneyUI": true,
+        "startTime": "Jul 22, 1:09 PM",
+        "endTime": "Never End",
+        "stopped": false,
+        "published": true,
+        "paused": false,
+        "cloneable": true,
+        "hidden": false,
+        "goal": 0,
+        "exits": "N/A",
+        "conversion": "0",
+        "conversionCount": 0,
+        "conversionCG": "0",
+        "conversionCGCount": 0,
+        "conversionSCG": "0",
+        "conversionSCGCount": 0,
+        "goalSet": "Yes",
+        "entries": {
+          "qualified": 65
+        },
+        "timeout": 0,
+        "hasSCG": false,
+        "hasCG": false,
+        "accountHasSCG": true,
+        "campaignDisabledCGMidway": false,
+        "campaignDisabledCGMidwayTS": -1,
+        "campaignDisabledSCGMidway": false,
+        "campaignDisabledSCGMidwayTS": -1
+      },
+      "exit_node_map": {
+        "segment_action": {
+          "step_id": 11,
+          "display_step_id": 1
+        }
+      },
+      "success": true
+    }
+  },
+  {
+    "journey_id": "326",
+    "data": {
+      "root": [
+        {
+          "percentage": 100,
+          "path": {
+            "segment_action": {
+              "key": "segment_action",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 6398,
+                  "step_id": 2,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 1,
+                    "from": null,
+                    "to": "segment_action"
+                  }
+                }
+              ],
+              "segment": true,
+              "message": false,
+              "stats": {
+                "qualified": 21,
+                "not_qualified": 0,
+                "fe": {},
+                "pu": {},
+                "sp": {},
+                "control_group": 0
+              }
+            },
+            "message_whatsapp": {
+              "key": "message_whatsapp",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 6399,
+                  "step_id": 4,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 3,
+                    "from": "segment_action",
+                    "to": "message_whatsapp"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": true,
+              "stats": {
+                "sent": 10,
+                "viewed": 1,
+                "clicked": 0,
+                "errors": 0,
+                "profile_not_reachable": 0,
+                "missing_platform_id": 0,
+                "DNDSet": 0,
+                "PurgedDueToCampaignDnd": 0,
+                "errors_urp": 0,
+                "control_group": 0,
+                "system_control_group": 0,
+                "sent_store": 0,
+                "unique_viewed": 0,
+                "unique_clicked": 0,
+                "delivered": 2,
+                "unique_delivered": 0,
+                "fe": {
+                  "3": 10
+                }
+              }
+            },
+            "force_exit": {
+              "key": "force_exit",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 6400,
+                  "step_id": 8,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 5,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 6402,
+                  "step_id": 10,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 7,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 6401,
+                  "step_id": 9,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_reachable"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 6,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            }
+          }
+        }
+      ],
+      "exit_stats": {},
+      "exit_key_map": {
+        "11": "segment_action"
+      },
+      "cg_stats": {
+        "entryType": "Live",
+        "createdOn": 1753170091307,
+        "createdBy": "satyajeet.kumar@apnamart.in",
+        "publishedOn": 1753170091307,
+        "c-by": "satyajeet.kumar@apnamart.in",
+        "status": "Running",
+        "comment": "",
+        "_id": 326,
+        "tagIdList": null,
+        "name": "CT_PURCHASE_GIFT_WB_FINAL",
+        "newJourneyUI": true,
+        "startTime": "Jul 22, 1:11 PM",
+        "endTime": "Never End",
+        "stopped": false,
+        "published": true,
+        "paused": false,
+        "cloneable": true,
+        "hidden": false,
+        "goal": 0,
+        "exits": "N/A",
+        "conversion": "0",
+        "conversionCount": 0,
+        "conversionCG": "0",
+        "conversionCGCount": 0,
+        "conversionSCG": "0",
+        "conversionSCGCount": 0,
+        "goalSet": "Yes",
+        "entries": {
+          "qualified": 21
+        },
+        "timeout": 0,
+        "hasSCG": false,
+        "hasCG": false,
+        "accountHasSCG": true,
+        "campaignDisabledCGMidway": false,
+        "campaignDisabledCGMidwayTS": -1,
+        "campaignDisabledSCGMidway": false,
+        "campaignDisabledSCGMidwayTS": -1
+      },
+      "exit_node_map": {
+        "segment_action": {
+          "step_id": 11,
+          "display_step_id": 1
+        }
+      },
+      "success": true
+    }
+  },
+  {
+    "journey_id": "311",
+    "data": {
+      "root": [
+        {
+          "percentage": 100,
+          "path": {
+            "segment_action": {
+              "key": "segment_action",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 6370,
+                  "step_id": 2,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 1,
+                    "from": null,
+                    "to": "segment_action"
+                  }
+                }
+              ],
+              "segment": true,
+              "message": false,
+              "stats": {
+                "qualified": 0,
+                "not_qualified": 0,
+                "fe": {
+                  "5": 1164
+                },
+                "pu": {},
+                "sp": {},
+                "control_group": 126,
+                "sent": 1225,
+                "viewed": 1164,
+                "clicked": 1094,
+                "errors": 0,
+                "profile_not_reachable": 0,
+                "missing_platform_id": 0,
+                "DNDSet": 0,
+                "PurgedDueToCampaignDnd": 0,
+                "errors_urp": 0,
+                "system_control_group": 0,
+                "sent_store": 0,
+                "unique_viewed": 1164,
+                "unique_clicked": 26,
+                "delivered": 0,
+                "unique_delivered": 0
+              }
+            },
+            "message_inapp": {
+              "key": "message_inapp",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 6371,
+                  "step_id": 4,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_inapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_inapp",
+                        "type": "segment_qualified"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 3,
+                    "from": "segment_action",
+                    "to": "message_inapp"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": true,
+              "stats": {
+                "sent": 1225,
+                "viewed": 1164,
+                "clicked": 1094,
+                "errors": 0,
+                "profile_not_reachable": 0,
+                "missing_platform_id": 0,
+                "DNDSet": 0,
+                "PurgedDueToCampaignDnd": 0,
+                "errors_urp": 0,
+                "control_group": 126,
+                "system_control_group": 0,
+                "sent_store": 0,
+                "unique_viewed": 1164,
+                "unique_clicked": 26,
+                "delivered": 0,
+                "unique_delivered": 0,
+                "fe": {
+                  "5": 1164
+                }
+              }
+            },
+            "wait@message_inapp@message_viewed": {
+              "key": "wait@message_inapp@message_viewed",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 6372,
+                  "step_id": 6,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_inapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_inapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "wait@message_inapp@message_viewed",
+                      "rel": {
+                        "from": "message_inapp",
+                        "to": "wait@message_inapp@message_viewed",
+                        "type": "message_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 5,
+                    "from": "message_inapp",
+                    "to": "wait@message_inapp@message_viewed"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            },
+            "force_exit": {
+              "key": "force_exit",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 6373,
+                  "step_id": 8,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_inapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_inapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "wait@message_inapp@message_viewed",
+                      "rel": {
+                        "from": "message_inapp",
+                        "to": "wait@message_inapp@message_viewed",
+                        "type": "message_sent"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "wait@message_inapp@message_viewed",
+                        "to": "force_exit",
+                        "type": "message_viewed"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 7,
+                    "from": "wait@message_inapp@message_viewed",
+                    "to": "force_exit"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            }
+          }
+        }
+      ],
+      "exit_stats": {
+        "goal": {
+          "5": {
+            "10": {
+              "_id": 6375,
+              "segment_type": "Action",
+              "customName": "My segment",
+              "step_id": 10,
+              "cnt": 2
+            }
+          }
+        },
+        "cgExit": {
+          "65531": {
+            "9": {
+              "_id": 6374,
+              "segment_type": "Action",
+              "customName": "My segment",
+              "step_id": 9,
+              "cnt": 1
+            },
+            "10": {
+              "_id": 6375,
+              "segment_type": "Action",
+              "customName": "My segment",
+              "step_id": 10,
+              "cnt": 19
+            }
+          }
+        }
+      },
+      "exit_key_map": {
+        "9": "segment_action",
+        "10": "segment_action2"
+      },
+      "cg_stats": {
+        "entryType": "Live",
+        "createdOn": 1753078055145,
+        "createdBy": "ritul.shinde@apnamart.in",
+        "publishedOn": 1753078261931,
+        "c-by": "ritul.shinde@apnamart.in",
+        "status": "Running",
+        "comment": "",
+        "_id": 311,
+        "tagIdList": null,
+        "name": "First order delivered_intertitial_JHCGWB_v2",
+        "newJourneyUI": true,
+        "startTime": "Jul 21, 11:41 AM",
+        "endTime": "Never End",
+        "stopped": false,
+        "published": true,
+        "paused": false,
+        "cloneable": true,
+        "hidden": false,
+        "goal": 2,
+        "exits": "N/A",
+        "conversion": "0.16",
+        "conversionCount": 2,
+        "conversionCG": "15.87",
+        "conversionCGCount": 20,
+        "conversionSCG": "0",
+        "conversionSCGCount": 0,
+        "goalSet": "Yes",
+        "entries": {
+          "qualified": 1225,
+          "cgEntry": 126
+        },
+        "timeout": 0,
+        "hasSCG": false,
+        "hasCG": true,
+        "accountHasSCG": true,
+        "campaignDisabledCGMidway": false,
+        "campaignDisabledCGMidwayTS": -1,
+        "campaignDisabledSCGMidway": false,
+        "campaignDisabledSCGMidwayTS": -1,
+        "cg_ratio": 10
+      },
+      "exit_node_map": {
+        "segment_action": {
+          "step_id": 9,
+          "display_step_id": 1
+        },
+        "segment_action2": {
+          "step_id": 10,
+          "display_step_id": 2
+        }
+      },
+      "success": true
+    }
+  },
+  {
+    "journey_id": "312",
+    "data": {
+      "root": [
+        {
+          "percentage": 100,
+          "path": {
+            "segment_action": {
+              "key": "segment_action",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 6377,
+                  "step_id": 2,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 1,
+                    "from": null,
+                    "to": "segment_action"
+                  }
+                }
+              ],
+              "segment": true,
+              "message": false,
+              "stats": {
+                "qualified": 0,
+                "not_qualified": 0,
+                "fe": {
+                  "5": 817
+                },
+                "pu": {},
+                "sp": {},
+                "control_group": 112,
+                "sent": 1010,
+                "viewed": 928,
+                "clicked": 882,
+                "errors": 0,
+                "profile_not_reachable": 0,
+                "missing_platform_id": 0,
+                "DNDSet": 0,
+                "PurgedDueToCampaignDnd": 0,
+                "errors_urp": 0,
+                "system_control_group": 0,
+                "sent_store": 0,
+                "unique_viewed": 817,
+                "unique_clicked": 19,
+                "delivered": 0,
+                "unique_delivered": 0
+              }
+            },
+            "message_inapp": {
+              "key": "message_inapp",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 6378,
+                  "step_id": 4,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_inapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_inapp",
+                        "type": "segment_qualified"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 3,
+                    "from": "segment_action",
+                    "to": "message_inapp"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": true,
+              "stats": {
+                "sent": 1010,
+                "viewed": 928,
+                "clicked": 882,
+                "errors": 0,
+                "profile_not_reachable": 0,
+                "missing_platform_id": 0,
+                "DNDSet": 0,
+                "PurgedDueToCampaignDnd": 0,
+                "errors_urp": 0,
+                "control_group": 112,
+                "system_control_group": 0,
+                "sent_store": 0,
+                "unique_viewed": 817,
+                "unique_clicked": 19,
+                "delivered": 0,
+                "unique_delivered": 0,
+                "fe": {
+                  "5": 817
+                }
+              }
+            },
+            "wait@message_inapp@message_viewed": {
+              "key": "wait@message_inapp@message_viewed",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 6379,
+                  "step_id": 6,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_inapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_inapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "wait@message_inapp@message_viewed",
+                      "rel": {
+                        "from": "message_inapp",
+                        "to": "wait@message_inapp@message_viewed",
+                        "type": "message_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 5,
+                    "from": "message_inapp",
+                    "to": "wait@message_inapp@message_viewed"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            },
+            "force_exit": {
+              "key": "force_exit",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 6380,
+                  "step_id": 8,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_inapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_inapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "wait@message_inapp@message_viewed",
+                      "rel": {
+                        "from": "message_inapp",
+                        "to": "wait@message_inapp@message_viewed",
+                        "type": "message_sent"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "wait@message_inapp@message_viewed",
+                        "to": "force_exit",
+                        "type": "message_viewed"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 7,
+                    "from": "wait@message_inapp@message_viewed",
+                    "to": "force_exit"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            }
+          }
+        }
+      ],
+      "exit_stats": {
+        "goal": {
+          "5": {
+            "10": {
+              "_id": 6382,
+              "segment_type": "Action",
+              "customName": "My segment",
+              "step_id": 10,
+              "cnt": 20
+            }
+          }
+        },
+        "cgExit": {
+          "65531": {
+            "9": {
+              "_id": 6381,
+              "segment_type": "Action",
+              "customName": "My segment",
+              "step_id": 9,
+              "cnt": 1
+            },
+            "10": {
+              "_id": 6382,
+              "segment_type": "Action",
+              "customName": "My segment",
+              "step_id": 10,
+              "cnt": 15
+            }
+          }
+        }
+      },
+      "exit_key_map": {
+        "9": "segment_action",
+        "10": "segment_action2"
+      },
+      "cg_stats": {
+        "entryType": "Live",
+        "createdOn": 1753078176998,
+        "createdBy": "ritul.shinde@apnamart.in",
+        "publishedOn": 1753078269884,
+        "c-by": "ritul.shinde@apnamart.in",
+        "status": "Running",
+        "comment": "",
+        "_id": 312,
+        "tagIdList": null,
+        "name": "SecondOrderDelivered_intertitial_JHCGWB_v2",
+        "newJourneyUI": true,
+        "startTime": "Jul 21, 11:41 AM",
+        "endTime": "Never End",
+        "stopped": false,
+        "published": true,
+        "paused": false,
+        "cloneable": true,
+        "hidden": false,
+        "goal": 20,
+        "exits": "N/A",
+        "conversion": "1.98",
+        "conversionCount": 20,
+        "conversionCG": "14.29",
+        "conversionCGCount": 16,
+        "conversionSCG": "0",
+        "conversionSCGCount": 0,
+        "goalSet": "Yes",
+        "entries": {
+          "qualified": 1010,
+          "cgEntry": 112
+        },
+        "timeout": 0,
+        "hasSCG": false,
+        "hasCG": true,
+        "accountHasSCG": true,
+        "campaignDisabledCGMidway": false,
+        "campaignDisabledCGMidwayTS": -1,
+        "campaignDisabledSCGMidway": false,
+        "campaignDisabledSCGMidwayTS": -1,
+        "cg_ratio": 10
+      },
+      "exit_node_map": {
+        "segment_action": {
+          "step_id": 9,
+          "display_step_id": 1
+        },
+        "segment_action2": {
+          "step_id": 10,
+          "display_step_id": 2
+        }
+      },
+      "success": true
+    }
+  },
+  {
+    "journey_id": "313",
+    "data": {
+      "root": null,
+      "exit_stats": {},
+      "exit_key_map": {},
+      "cg_stats": {
+        "entryType": "-",
+        "createdOn": 1753079998772,
+        "createdBy": "ritul.shinde@apnamart.in",
+        "publishedOn": "-",
+        "c-by": "-",
+        "status": "Draft",
+        "comment": "",
+        "_id": 313,
+        "tagIdList": null,
+        "name": "FTU_SA_Drop_off_JHCG_v2",
+        "newJourneyUI": true,
+        "startTime": "-",
+        "endTime": "-",
+        "stopped": false,
+        "paused": false,
+        "cloneable": true,
+        "hidden": false,
+        "entries": "-",
+        "exits": "-",
+        "timeout": "-",
+        "goalSet": "-",
+        "goal": "-",
+        "conversion": "-"
+      },
+      "success": true
+    }
+  },
+  {
+    "journey_id": "314",
+    "data": {
+      "root": [
+        {
+          "percentage": 100,
+          "path": {
+            "segment_action": {
+              "key": "segment_action",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 2058,
+                  "step_id": 2,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 1,
+                    "from": null,
+                    "to": "segment_action"
+                  }
+                }
+              ],
+              "segment": true,
+              "message": false,
+              "stats": {
+                "qualified": 0,
+                "not_qualified": 0,
+                "fe": {},
+                "pu": {},
+                "sp": {},
+                "control_group": 0
+              }
+            },
+            "message_whatsapp": {
+              "key": "message_whatsapp",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 2059,
+                  "step_id": 4,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 3,
+                    "from": "segment_action",
+                    "to": "message_whatsapp"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": true,
+              "stats": {}
+            },
+            "force_exit": {
+              "key": "force_exit",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 2060,
+                  "step_id": 8,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 5,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 2062,
+                  "step_id": 10,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 7,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 2061,
+                  "step_id": 9,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_reachable"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 6,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            }
+          }
+        }
+      ],
+      "exit_stats": {},
+      "exit_key_map": {},
+      "cg_stats": {
+        "entryType": "Live",
+        "createdOn": 1753102226983,
+        "createdBy": "satyajeet.kumar@apnamart.in",
+        "publishedOn": 1753161190937,
+        "c-by": "satyajeet.kumar@apnamart.in",
+        "status": "Stopped",
+        "comment": "",
+        "_id": 314,
+        "tagIdList": null,
+        "name": "CT_Purchase_WA_JHCG_220725",
+        "newJourneyUI": true,
+        "startTime": "Jul 22, 10:43 AM",
+        "endTime": "Never End",
+        "stopped": true,
+        "published": true,
+        "paused": false,
+        "cloneable": true,
+        "hidden": false,
+        "goal": "N/A",
+        "exits": 0,
+        "conversion": "0",
+        "conversionCount": 0,
+        "goalSet": "No",
+        "entries": {},
+        "timeout": 0,
+        "hasSCG": false,
+        "hasCG": false,
+        "accountHasSCG": true,
+        "campaignDisabledCGMidway": false,
+        "campaignDisabledCGMidwayTS": -1,
+        "campaignDisabledSCGMidway": false,
+        "campaignDisabledSCGMidwayTS": -1
+      },
+      "success": true
+    }
+  },
+  {
+    "journey_id": "315",
+    "data": {
+      "root": [
+        {
+          "percentage": 100,
+          "path": {
+            "segment_action": {
+              "key": "segment_action",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 2064,
+                  "step_id": 2,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 1,
+                    "from": null,
+                    "to": "segment_action"
+                  }
+                }
+              ],
+              "segment": true,
+              "message": false,
+              "stats": {
+                "qualified": 0,
+                "not_qualified": 0,
+                "fe": {},
+                "pu": {},
+                "sp": {},
+                "control_group": 0
+              }
+            },
+            "message_whatsapp": {
+              "key": "message_whatsapp",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 2065,
+                  "step_id": 4,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 3,
+                    "from": "segment_action",
+                    "to": "message_whatsapp"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": true,
+              "stats": {}
+            },
+            "force_exit": {
+              "key": "force_exit",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 2066,
+                  "step_id": 8,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 5,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 2068,
+                  "step_id": 10,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 7,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 2067,
+                  "step_id": 9,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_reachable"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 6,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            }
+          }
+        }
+      ],
+      "exit_stats": {},
+      "exit_key_map": {
+        "11": "segment_action"
+      },
+      "cg_stats": {
+        "entryType": "Live",
+        "createdOn": 1753161298832,
+        "createdBy": "satyajeet.kumar@apnamart.in",
+        "publishedOn": 1753161298832,
+        "c-by": "satyajeet.kumar@apnamart.in",
+        "status": "Stopped",
+        "comment": "",
+        "_id": 315,
+        "tagIdList": null,
+        "name": "CT_Purchase_WA_JHCG_Final_220725",
+        "newJourneyUI": true,
+        "startTime": "Jul 22, 10:44 AM",
+        "endTime": "Never End",
+        "stopped": true,
+        "published": true,
+        "paused": false,
+        "cloneable": true,
+        "hidden": false,
+        "goal": 0,
+        "exits": "N/A",
+        "conversion": "0",
+        "conversionCount": 0,
+        "conversionCG": "0",
+        "conversionCGCount": 0,
+        "conversionSCG": "0",
+        "conversionSCGCount": 0,
+        "goalSet": "Yes",
+        "entries": {},
+        "timeout": 0,
+        "hasSCG": false,
+        "hasCG": false,
+        "accountHasSCG": true,
+        "campaignDisabledCGMidway": false,
+        "campaignDisabledCGMidwayTS": -1,
+        "campaignDisabledSCGMidway": false,
+        "campaignDisabledSCGMidwayTS": -1
+      },
+      "exit_node_map": {
+        "segment_action": {
+          "step_id": 11,
+          "display_step_id": 1
+        }
+      },
+      "success": true
+    }
+  },
+  {
+    "journey_id": "317",
+    "data": {
+      "root": [
+        {
+          "percentage": 100,
+          "path": {
+            "segment_action": {
+              "key": "segment_action",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 2078,
+                  "step_id": 2,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 1,
+                    "from": null,
+                    "to": "segment_action"
+                  }
+                }
+              ],
+              "segment": true,
+              "message": false,
+              "stats": {
+                "qualified": 0,
+                "not_qualified": 0,
+                "fe": {},
+                "pu": {},
+                "sp": {},
+                "control_group": 0
+              }
+            },
+            "message_whatsapp": {
+              "key": "message_whatsapp",
+              "virtual": false,
+              "steps": [
+                {
+                  "_id": 2079,
+                  "step_id": 4,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 3,
+                    "from": "segment_action",
+                    "to": "message_whatsapp"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": true,
+              "stats": {}
+            },
+            "force_exit": {
+              "key": "force_exit",
+              "virtual": true,
+              "steps": [
+                {
+                  "_id": 2080,
+                  "step_id": 8,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 5,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 2082,
+                  "step_id": 10,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_sent"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 7,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                },
+                {
+                  "_id": 2081,
+                  "step_id": 9,
+                  "my_path": [
+                    {
+                      "ui_key": "segment_action",
+                      "rel": {
+                        "from": null,
+                        "to": "segment_action",
+                        "type": "root"
+                      }
+                    },
+                    {
+                      "ui_key": "message_whatsapp",
+                      "rel": {
+                        "from": "segment_action",
+                        "to": "message_whatsapp",
+                        "type": "segment_qualified"
+                      }
+                    },
+                    {
+                      "ui_key": "force_exit",
+                      "rel": {
+                        "from": "message_whatsapp",
+                        "to": "force_exit",
+                        "type": "message_not_reachable"
+                      }
+                    }
+                  ],
+                  "nl": {
+                    "link_id": 6,
+                    "from": "message_whatsapp",
+                    "to": "force_exit"
+                  }
+                }
+              ],
+              "segment": false,
+              "message": false,
+              "stats": {
+                "pathStats": {}
+              }
+            }
+          }
+        }
+      ],
+      "exit_stats": {},
+      "exit_key_map": {
+        "11": "segment_action"
+      },
+      "cg_stats": {
+        "entryType": "Live",
+        "createdOn": 1753163079305,
+        "createdBy": "satyajeet.kumar@apnamart.in",
+        "publishedOn": 1753163079305,
+        "c-by": "satyajeet.kumar@apnamart.in",
+        "status": "Stopped",
+        "comment": "",
+        "_id": 317,
+        "tagIdList": null,
+        "name": "Clone of CT_Purchase_WA_JHCG_Final_220725",
+        "newJourneyUI": true,
+        "startTime": "Jul 22, 11:14 AM",
+        "endTime": "Never End",
+        "stopped": true,
+        "published": true,
+        "paused": false,
+        "cloneable": true,
+        "hidden": false,
+        "goal": 0,
+        "exits": "N/A",
+        "conversion": "0",
+        "conversionCount": 0,
+        "conversionCG": "0",
+        "conversionCGCount": 0,
+        "conversionSCG": "0",
+        "conversionSCGCount": 0,
+        "goalSet": "Yes",
+        "entries": {},
+        "timeout": 0,
+        "hasSCG": false,
+        "hasCG": false,
+        "accountHasSCG": true,
+        "campaignDisabledCGMidway": false,
+        "campaignDisabledCGMidwayTS": -1,
+        "campaignDisabledSCGMidway": false,
+        "campaignDisabledSCGMidwayTS": -1
+      },
+      "exit_node_map": {
+        "segment_action": {
+          "step_id": 11,
+          "display_step_id": 1
+        }
+      },
+      "success": true
+    }
+  }
+]

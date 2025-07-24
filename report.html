@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Campaign Effectiveness Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.3;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .page {
+        padding: 0;
+        display: block;
+        }
+
+        .page:last-child {
+            page-break-after: avoid;
+        }
+
+        .page-content {
+            flex: none;
+            overflow: visible;
+            padding-bottom: 0;
+        }
+
+        .header {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            height: 35px;
+            width: auto;
+        }
+
+        .company-info {
+            text-align: right;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 15px;
+            left: 40px;
+            right: 40px;
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: white;
+        }
+
+        .footer .logo-small {
+            height: 20px;
+            width: auto;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            color: #34495e;
+            margin: 20px 0 12px 0;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h3 {
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin: 15px 0 8px 0;
+        }
+
+        .subtitle {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .metric-card {
+            background: #f8f9fa;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #3498db;
+        }
+
+        .metric-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+
+        .metric-label {
+            color: #7f8c8d;
+            font-size: 0.8em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            background: white;
+            font-size: 0.8em;
+        }
+
+        th, td {
+            padding: 8px 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 0.85em;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .grade-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+
+        .grade-a { background: #d4edda; color: #155724; }
+        .grade-b { background: #d1ecf1; color: #0c5460; }
+        .grade-c { background: #fff3cd; color: #856404; }
+        .grade-d { background: #f8d7da; color: #721c24; }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 14px;
+            margin: 12px 0;
+            font-size: 0.9em;
+        }
+
+        .recommendations {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 12px 0;
+        }
+
+        .recommendation-item {
+            margin: 8px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
+            font-size: 0.85em;
+        }
+
+        .recommendation-item h3 {
+            font-size: 0.8em;
+            margin: 0 0 6px 0;
+        }
+
+        .cover-page {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding: 40px 0;
+        }
+
+        .cover-title {
+            font-size: 3.2em;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        .cover-subtitle {
+            font-size: 1.6em;
+            color: #7f8c8d;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        .cover-details {
+            background: #fafafa;
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 40px;
+            border: 1px solid #e8e8e8;
+            max-width: 600px;
+        }
+
+        .cover-details h3 {
+            color: #2c3e50;
+            margin: 25px 0 15px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .cover-details h3:first-child {
+            margin-top: 0;
+        }
+
+        .cover-details p {
+            color: #555;
+            line-height: 1.3;
+        }
+
+        .executive-summary {
+            background: #f8f9fa;
+            border-left: 4px solid #27ae60;
+            padding: 14px;
+            margin: 12px 0;
+            font-size: 0.9em;
+        }
+
+        .dimension-section {
+            margin: 15px 0;
+            padding: 14px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        ul {
+            margin: 8px 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin: 4px 0;
+            font-size: 0.9em;
+        }
+
+        .data-table {
+            font-size: 0.75em;
+        }
+
+        .data-table th {
+            font-size: 0.8em;
+            padding: 6px 8px;
+        }
+
+        .data-table td {
+            padding: 6px 8px;
+        }
+
+        .status-running { 
+            background: #d4edda; 
+            color: #155724; 
+            padding: 3px 6px; 
+            border-radius: 10px; 
+            font-size: 0.75em;
+        }
+
+        .status-stopped { 
+            background: #f8d7da; 
+            color: #721c24; 
+            padding: 3px 6px; 
+            border-radius: 10px; 
+            font-size: 0.75em;
+        }
+
+        .status-draft { 
+            background: #e2e3e5; 
+            color: #383d41; 
+            padding: 3px 6px; 
+            border-radius: 10px; 
+            font-size: 0.75em;
+        }
+
+        .deep-dive-section {
+            margin-bottom: 32px;
+        }
+
+        .bullet {
+            position: relative;
+            margin-left: 1.5em;
+            margin-bottom: 0.5em;
+            text-indent: -1em;
+            font-size: 0.9em;
+        }
+        .bullet:before {
+            content: '•';
+            position: absolute;
+            left: -1.2em;
+            color: #333;
+        }
+
+        @media print {
+            .page {
+                page-break-after: always;
+                min-height: 100vh;
+                max-height: 100vh;
+            }
+            body {
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Cover Page -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div><strong>Niti.ai</strong></div>
+            <div>Generated: 24 Jul 2025</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="cover-page">
+            <h1 class="cover-title">Marketing Campaign Effectiveness Report</h1>
+            <p class="cover-subtitle">for Apna Mart</p>
+            
+            <div class="cover-details">
+                <h3>Reporting Period</h3>
+                <p><strong>24 Jul 2025</strong></p>
+                
+                <h3>Report Overview</h3>
+                <p>Comprehensive analysis of 15 marketing campaigns and 10 customer journeys with performance assessment and strategic recommendations for optimization</p>
+                
+                <h3>Prepared by</h3>
+                <p><strong>Niti AI</strong><br>Advanced Marketing Analytics</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Executive Summary Page -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div>Marketing Campaign Effectiveness Report</div>
+            <div>24 Jul 2025</div>
+        </div>
+    </div>
+    <div class="page-content">
+        <h1>Executive Summary</h1>
+        <div class="executive-summary">
+            During the period from 15 July 2025 to 16 July 2025, a total of 15 campaigns and 10 journeys were executed. The campaigns reached over one million contacts with a total of 514,059 impressions and 3,934 clicks, resulting in an overall click-through rate (CTR) of approximately 0.77%. The campaign performance was varied, with the 'PN | 07:30 | Milk offer - WB | 160725' campaign achieving the highest CTR at 0.98%. However, some campaigns, such as 'SMS | 17:10 | CT--WB | 150725', reported no clicks at all, indicating potential areas for improvement in engagement strategies. The campaign's overall grade was evaluated at a B, indicating room for improvement, particularly in experimentation and creative variation.
+
+The journeys displayed a range of statuses, from running to stopped, with varied success in reaching goals. The 'CT_ORDER_PLACED_GIFT_WB_FINAL' journey was notable for achieving a conversion rate of 4.17%, whereas several journeys reported no conversions, highlighting a need to refine targeting and engagement tactics. The overall grade for the journeys was a C, suggesting significant opportunities for optimizing user journeys through improved segmentation and personalization strategies.
+        </div>
+        <h3>Time Frame: 15 Jul 2025 - 16 Jul 2025</h3>
+        <h2>Key Highlights</h2>
+        <div class="bullet">Total Campaigns: 15</div><div class="bullet">Total Journeys: 10</div><div class="bullet">Overall Campaign CTR: 0.77%</div><div class="bullet">Top Campaign: PN | 07:30 | Milk offer - WB | 160725</div><div class="bullet">Highest Journey Conversion Rate: 4.17%</div><div class="bullet">Overall Campaign Grade: B</div><div class="bullet">Journey Grade: C</div><div class="bullet">Top Journey: CT_ORDER_PLACED_GIFT_WB_FINAL</div>
+    </div>
+</div>
+
+<!-- Scorecard Summary Page -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div>Marketing Campaign Effectiveness Report</div>
+            <div>24 Jul 2025</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h1>Scorecard Summary</h1>
+
+        <h2>Campaign Scorecard (Qualitative Dimensions)</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Grade</th>
+                    <th>Summary Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Personalization</td><td>B</td><td>Effective use of user attributes but limited behavioral triggers.</td></tr><tr><td>Segmentation Depth</td><td>C</td><td>Segments are not well-defined leading to overlap.</td></tr><tr><td>Experimentation</td><td>D</td><td>Few experiments conducted with minimal variations.</td></tr><tr><td>Campaign Diversity</td><td>B</td><td>Good variety in goals but limited channels used.</td></tr><tr><td>Audience Reach & Rotation</td><td>B</td><td>Decent reach but signs of audience fatigue.</td></tr><tr><td>Creative Variation</td><td>C</td><td>Limited variation in creative testing.</td></tr><tr><td>Performance Metrics</td><td>B</td><td>Basic metrics tracked with some drop-off analysis.</td></tr>
+            </tbody>
+        </table>
+
+        <p style="font-size: 0.85em; margin: 8px 0;"><em>Note: Find the grade breakdown for each dimension in the appendix.</em></p>
+
+        <h2>Journey Scorecard (Qualitative Dimensions)</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Grade</th>
+                    <th>Summary Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Personalization</td><td>C</td><td>Limited use of user-specific attributes and journey triggers.</td></tr><tr><td>Segmentation Depth</td><td>C</td><td>Journeys show inadequate segmentation strategies.</td></tr><tr><td>Experimentation</td><td>D</td><td>Minimal experimentation and hypothesis testing.</td></tr><tr><td>Campaign Diversity</td><td>B</td><td>Journeys lack diversity in channels and engagement methods.</td></tr><tr><td>Audience Reach & Rotation</td><td>C</td><td>Journeys affected by audience fatigue and low engagement.</td></tr><tr><td>Creative Variation</td><td>C</td><td>Creatives lack variation, impacting engagement.</td></tr><tr><td>Performance Metrics</td><td>C</td><td>Limited tracking and analysis of journey performance.</td></tr>
+            </tbody>
+        </table>
+
+        <p style="font-size: 0.85em; margin: 8px 0;"><em>Note: Find the grade breakdown for each dimension in the appendix.</em></p>
+    </div>
+</div>
+
+<!-- Quantitative Overview Page -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div>Marketing Campaign Effectiveness Report</div>
+            <div>24 Jul 2025</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h2>Campaign Scorecard (Quantitative Overview)</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Total Impressions</td><td>514,059</td></tr><tr><td>Total Clicked</td><td>3,934</td></tr><tr><td>Overall CTR (%)</td><td>0.77</td></tr><tr><td>Total Sent</td><td>1,016,928</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Journey Scorecard (Quantitative Overview)</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Total Journeys</td><td>10</td></tr><tr><td>Highest Conversion Rate</td><td>4.17%</td></tr><tr><td>Average Goal Completions per Journey</td><td>2.3</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Deep Dive - All Dimensions Page 1 -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div>Marketing Campaign Effectiveness Report</div>
+            <div>24 Jul 2025</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h1>Deep Dive by Dimension</h1>
+        <h2>Personalization</h2>
+        <div class="bullet"><strong>Focus:</strong> Evaluating the integration of personalization in campaigns and journeys.</div><div class="bullet"><strong>Grade:</strong> B</div><div class="bullet">Use of user attributes: Campaigns like 'PN | 07:15 | Milk offer - JHCG | 160725' effectively used location-based attributes to personalize offers.</div><div class="bullet">Behavioral triggers: Limited use of triggers; most campaigns lacked behavior-based personalization.</div><div class="bullet">Journey-level dynamic routing: Journeys like 'CT_ORDER_PLACED_GIFT_JHCG_FINAL' could improve by dynamically routing based on user interactions.</div>
+        <h2>Segmentation Depth</h2>
+        <div class="bullet"><strong>Focus:</strong> Analyzing the effectiveness of segmentation strategies.</div><div class="bullet"><strong>Grade:</strong> C</div><div class="bullet">Number of active segments and their logic: Campaigns used broad 'New Segment' targeting, resulting in large audience sizes but low engagement.</div><div class="bullet">Overlap between segments: Significant overlap noted, particularly in 'SMS' campaigns, diluting message relevance.</div><div class="bullet">Segment-wise performance variation: 'Push' campaigns performed better with focused segments compared to 'SMS'.</div>
+        <h2>Experimentation</h2>
+        <div class="bullet"><strong>Focus:</strong> Examining the structure and implementation of experiments.</div><div class="bullet"><strong>Grade:</strong> D</div><div class="bullet">Number of experiments and their logic: Few campaigns employed A/B testing, with no significant logic variations.</div><div class="bullet">Sample size and confidence levels: Sample sizes were adequate but lacked statistical rigor in determining confidence levels.</div><div class="bullet">Existence of clear hypothesis: Experiments lacked clear hypotheses, reducing the ability to derive actionable insights.</div>
+    </div>
+</div>
+<!-- Deep Dive - All Dimensions Page 2 -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div>Marketing Campaign Effectiveness Report</div>
+            <div>24 Jul 2025</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h2>Campaign Diversity</h2>
+        <div class="bullet"><strong>Focus:</strong> Understanding the variety in campaign goals and channels.</div><div class="bullet"><strong>Grade:</strong> B</div><div class="bullet">Variety in campaign goals: Diverse goals observed in campaigns like 'PN | 07:30 | Milk offer - WB | 160725', focusing on both retention and acquisition.</div><div class="bullet">Channels used: Predominantly 'Push' and 'SMS', with limited use of other channels like 'InApp' and 'WhatsApp'.</div>
+        <h2>Audience Reach / Rotation</h2>
+        <div class="bullet"><strong>Focus:</strong> Measuring audience engagement and exposure.</div><div class="bullet"><strong>Grade:</strong> B</div><div class="bullet">Reach metrics: High reach but engagement varies with 'Push' channels performing better than 'SMS'.</div><div class="bullet">Rotation metrics: Repetitive messaging in 'SMS' channels led to lower engagement rates.</div><div class="bullet">Audience fatigue symptoms: Indicators of fatigue in segments receiving frequent messages, affecting CTR.</div>
+        <h2>Creative Variation</h2>
+        <div class="bullet"><strong>Focus:</strong> Assessing the diversity and testing of creative elements.</div><div class="bullet"><strong>Grade:</strong> C</div><div class="bullet">Variants tested: Limited variant testing, primarily text-only versus image creatives in 'Push' campaigns.</div><div class="bullet">Visual vs Textual variation: Text-only creatives dominated, with minimal visual testing in 'SMS' channels.</div><div class="bullet">Performance by creative type: Image creatives in 'Push' campaigns showed higher engagement than text-only.</div>
+        <h2>Performance Metrics</h2>
+        <div class="bullet"><strong>Focus:</strong> Evaluating the tracking and analysis of performance metrics.</div><div class="bullet"><strong>Grade:</strong> B</div><div class="bullet">Performance metrics tracked: Basic metrics like CTR and impressions tracked; lacked deeper insights.</div><div class="bullet">Funnel drop-offs analysis: Minimal analysis on funnel drop-offs, particularly in 'InApp' campaigns.</div>
+    </div>
+</div>
+
+<!-- Recommendations Page -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div>Marketing Campaign Effectiveness Report</div>
+            <div>24 Jul 2025</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h1>Missed Opportunities & Recommendations</h1>
+
+        <div class="missed-opportunities">
+            <h2>Missed Opportunities</h2>
+            <ul>
+                <div class="bullet">Improved segmentation could enhance personalization and engagement.</div><div class="bullet">Increased experimentation with clear hypotheses could yield better insights.</div><div class="bullet">Diversifying channels beyond 'Push' and 'SMS' to include more 'InApp' and 'WhatsApp' could widen reach.</div><div class="bullet">Strengthening creative testing, especially in 'SMS' campaigns, could improve engagement.</div>
+            </ul>
+            <h2>Recommendations</h2>
+            <ul>
+                <div class="bullet">Refine segmentation strategies to reduce overlap and increase message relevance.</div><div class="bullet">Implement more A/B testing with defined hypotheses to guide strategic decisions.</div><div class="bullet">Expand the use of visual creatives in 'SMS' campaigns to boost engagement.</div><div class="bullet">Increase focus on funnel analysis to identify and address drop-off points.</div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Appendix - Grade Computation Page -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div>Marketing Campaign Effectiveness Report</div>
+            <div>24 Jul 2025</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h1>Appendix</h1>
+
+        <h2>Campaigns Grade Computation Breakdown</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Grade</th>
+                    <th>Score</th>
+                    <th>Weight</th>
+                    <th>Weighted Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Personalization</td><td>B</td><td>3</td><td>0.2</td><td>0.6</td></tr><tr><td>Segmentation Depth</td><td>C</td><td>2</td><td>0.15</td><td>0.3</td></tr><tr><td>Experimentation</td><td>D</td><td>1</td><td>0.1</td><td>0.1</td></tr><tr><td>Campaign Diversity</td><td>B</td><td>3</td><td>0.2</td><td>0.6</td></tr><tr><td>Audience Reach & Rotation</td><td>B</td><td>3</td><td>0.15</td><td>0.45</td></tr><tr><td>Creative Variation</td><td>C</td><td>2</td><td>0.1</td><td>0.2</td></tr><tr><td>Performance Metrics</td><td>B</td><td>3</td><td>0.1</td><td>0.3</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Journeys Grade Computation Breakdown</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Grade</th>
+                    <th>Score</th>
+                    <th>Weight</th>
+                    <th>Weighted Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Personalization</td><td>C</td><td>2</td><td>0.2</td><td>0.4</td></tr><tr><td>Segmentation Depth</td><td>C</td><td>2</td><td>0.15</td><td>0.3</td></tr><tr><td>Experimentation</td><td>D</td><td>1</td><td>0.1</td><td>0.1</td></tr><tr><td>Campaign Diversity</td><td>B</td><td>3</td><td>0.2</td><td>0.6</td></tr><tr><td>Audience Reach & Rotation</td><td>C</td><td>2</td><td>0.15</td><td>0.3</td></tr><tr><td>Creative Variation</td><td>C</td><td>2</td><td>0.1</td><td>0.2</td></tr><tr><td>Performance Metrics</td><td>C</td><td>2</td><td>0.1</td><td>0.2</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Grading Methodology Page -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div>Marketing Campaign Effectiveness Report</div>
+            <div>24 Jul 2025</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h2>Grading Methodology</h2>
+        <p style="font-size: 0.9em;">The same grading rubric and methodology applies to both campaigns and journeys, ensuring a consistent evaluation criteria across all dimensions.</p>
+
+        <h3>Grade Scale</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Letter Grade</th>
+                    <th>Score Range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>A</td><td>4.0 - 3.5</td></tr><tr><td>B</td><td>3.49 - 2.5</td></tr><tr><td>C</td><td>2.49 - 1.5</td></tr><tr><td>D</td><td>1.49 - 0.5</td></tr><tr><td>F</td><td>0.49 - 0.0</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Grade Weights</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Personalization</td><td>0.2</td></tr><tr><td>Segmentation Depth</td><td>0.15</td></tr><tr><td>Experimentation</td><td>0.1</td></tr><tr><td>Campaign Diversity</td><td>0.2</td></tr><tr><td>Audience Reach & Rotation</td><td>0.15</td></tr><tr><td>Creative Variation</td><td>0.1</td></tr><tr><td>Performance Metrics</td><td>0.1</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Campaign Dataset Page -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div>Marketing Campaign Effectiveness Report</div>
+            <div>24 Jul 2025</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h2>Campaign Dataset Summary for all campaigns</h2>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Campaign Name</th>
+                    <th>Date</th>
+                    <th>Region</th>
+                    <th>Impressions</th>
+                    <th>Clicks</th>
+                    <th>CTR (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>PN | 17:15 | CT - WB | 150725</td><td>2025-07-15</td><td>West Bengal</td><td>44,161</td><td>365</td><td>0.83</td></tr><tr><td>PN | 18:30 | Milk offer - JHCG | 150725</td><td>2025-07-15</td><td>Chhattisgarh, Jharkhand</td><td>64,596</td><td>435</td><td>0.67</td></tr><tr><td>PN | 18:40 | Milk offer - WB | 150725</td><td>2025-07-15</td><td>West Bengal</td><td>26,144</td><td>164</td><td>0.63</td></tr><tr><td>PN | 19:30 | CT - JHCG | 150725</td><td>2025-07-15</td><td>Jharkhand, Chhattisgarh</td><td>107,259</td><td>767</td><td>0.72</td></tr><tr><td>PN | 19:40 | CT - WB | 150725</td><td>2025-07-15</td><td>West Bengal</td><td>44,964</td><td>184</td><td>0.41</td></tr><tr><td>PN | 20:50 | CT - WB | 150725</td><td>2025-07-15</td><td>West Bengal</td><td>44,757</td><td>297</td><td>0.66</td></tr><tr><td>PN | 20:45 | CT - JHCG | 150725</td><td>2025-07-15</td><td>Jharkhand, Chhattisgarh</td><td>105,410</td><td>437</td><td>0.41</td></tr><tr><td>SMS | 17:05 | CT--JH | 150725</td><td>2025-07-15</td><td>N/A</td><td>0</td><td>0</td><td>0.00</td></tr><tr><td>SMS | 17:10 | CT--WB | 150725</td><td>2025-07-15</td><td>N/A</td><td>0</td><td>0</td><td>0.00</td></tr><tr><td>inapp_mt_post_order_jhcg_150725</td><td>2025-07-15</td><td>N/A</td><td>0</td><td>148</td><td>0.00</td></tr><tr><td>inapp_mt_post_order_wb_150725</td><td>2025-07-15</td><td>N/A</td><td>0</td><td>54</td><td>0.00</td></tr><tr><td>WA | 18:40 | CT-PURCHASE-JHCG | 150725</td><td>2025-07-15</td><td>N/A</td><td>0</td><td>0</td><td>0.00</td></tr><tr><td>WA | 18:50 | CT-PURCHASE-WB | 150725</td><td>2025-07-15</td><td>N/A</td><td>0</td><td>0</td><td>0.00</td></tr><tr><td>PN | 07:15 | Milk offer - JHCG | 160725</td><td>2025-07-16</td><td>Chhattisgarh, Jharkhand</td><td>54,556</td><td>473</td><td>0.87</td></tr><tr><td>PN | 07:30 | Milk offer - WB | 160725</td><td>2025-07-16</td><td>West Bengal</td><td>22,207</td><td>218</td><td>0.98</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Journey Dataset Page -->
+<div class="page">
+    <div class="header">
+        <img src="https://loopimagepreviews.s3.ap-south-1.amazonaws.com/enterprise/Niti%20Logo%20Horizontal-7%3A46%3A01AM_Jul%2023.png" alt="Niti.ai Logo" class="logo">
+        <div class="company-info">
+            <div>Marketing Campaign Effectiveness Report</div>
+            <div>24 Jul 2025</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h2>Journey Dataset Summary for all journeys</h2>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Journey Name</th>
+                    <th>Status</th>
+                    <th>Start Time</th>
+                    <th>Message Channel</th>
+                    <th>Goal Completions</th>
+                    <th>Control Group Size</th>
+                    <th>Conversion Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>CT_ORDER_PLACED_GIFT_JHCG_FINAL</td><td>Running</td><td>Jul 22, 12:02 PM</td><td>WhatsApp</td><td>0</td><td>0</td><td>0%</td></tr><tr><td>CT_ORDER_PLACED_GIFT_WB_FINAL</td><td>Running</td><td>Jul 22, 12:04 PM</td><td>WhatsApp</td><td>1</td><td>0</td><td>4.17%</td></tr><tr><td>CT_PURCHASE_GIFT_JHCG_FINAL</td><td>Running</td><td>Jul 22, 1:09 PM</td><td>WhatsApp</td><td>0</td><td>0</td><td>0%</td></tr><tr><td>CT_PURCHASE_GIFT_WB_FINAL</td><td>Running</td><td>Jul 22, 1:11 PM</td><td>WhatsApp</td><td>0</td><td>0</td><td>0%</td></tr><tr><td>First order delivered_intertitial_JHCGWB_v2</td><td>Running</td><td>Jul 21, 11:41 AM</td><td>None</td><td>2</td><td>126</td><td>0.16%</td></tr><tr><td>SecondOrderDelivered_intertitial_JHCGWB_v2</td><td>Running</td><td>Jul 21, 11:41 AM</td><td>None</td><td>20</td><td>112</td><td>1.98%</td></tr><tr><td>FTU_SA_Drop_off_JHCG_v2</td><td>Draft</td><td>-</td><td>None</td><td>0</td><td>0</td><td>-%</td></tr><tr><td>CT_Purchase_WA_JHCG_220725</td><td>Stopped</td><td>Jul 22, 10:43 AM</td><td>WhatsApp</td><td>0</td><td>0</td><td>0%</td></tr><tr><td>CT_Purchase_WA_JHCG_Final_220725</td><td>Stopped</td><td>Jul 22, 10:44 AM</td><td>WhatsApp</td><td>0</td><td>0</td><td>0%</td></tr><tr><td>Clone of CT_Purchase_WA_JHCG_Final_220725</td><td>Stopped</td><td>Jul 22, 11:14 AM</td><td>WhatsApp</td><td>0</td><td>0</td><td>0%</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

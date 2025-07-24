@@ -1,0 +1,619 @@
+{
+  "executive_summary": "During the period from 15 July 2025 to 16 July 2025, a total of 15 campaigns and 10 journeys were executed. The campaigns reached over one million contacts with a total of 514,059 impressions and 3,934 clicks, resulting in an overall click-through rate (CTR) of approximately 0.77%. The campaign performance was varied, with the 'PN | 07:30 | Milk offer - WB | 160725' campaign achieving the highest CTR at 0.98%. However, some campaigns, such as 'SMS | 17:10 | CT--WB | 150725', reported no clicks at all, indicating potential areas for improvement in engagement strategies. The campaign's overall grade was evaluated at a B, indicating room for improvement, particularly in experimentation and creative variation.\n\nThe journeys displayed a range of statuses, from running to stopped, with varied success in reaching goals. The 'CT_ORDER_PLACED_GIFT_WB_FINAL' journey was notable for achieving a conversion rate of 4.17%, whereas several journeys reported no conversions, highlighting a need to refine targeting and engagement tactics. The overall grade for the journeys was a C, suggesting significant opportunities for optimizing user journeys through improved segmentation and personalization strategies.",
+  "time_frame": "15 Jul 2025 - 16 Jul 2025",
+  "key_highlights_boxes": [
+    "Total Campaigns: 15",
+    "Total Journeys: 10",
+    "Overall Campaign CTR: 0.77%",
+    "Top Campaign: PN | 07:30 | Milk offer - WB | 160725",
+    "Highest Journey Conversion Rate: 4.17%",
+    "Overall Campaign Grade: B",
+    "Journey Grade: C",
+    "Top Journey: CT_ORDER_PLACED_GIFT_WB_FINAL"
+  ],
+  "campaign_scorecard_quant_table": [
+    [
+      "Metric",
+      "Value"
+    ],
+    [
+      "Total Impressions",
+      "514,059"
+    ],
+    [
+      "Total Clicked",
+      "3,934"
+    ],
+    [
+      "Overall CTR (%)",
+      "0.77"
+    ],
+    [
+      "Total Sent",
+      "1,016,928"
+    ]
+  ],
+  "campaign_scorecard_qual_table": [
+    [
+      "Dimension",
+      "Grade",
+      "Summary Notes"
+    ],
+    [
+      "Personalization",
+      "B",
+      "Effective use of user attributes but limited behavioral triggers."
+    ],
+    [
+      "Segmentation Depth",
+      "C",
+      "Segments are not well-defined leading to overlap."
+    ],
+    [
+      "Experimentation",
+      "D",
+      "Few experiments conducted with minimal variations."
+    ],
+    [
+      "Campaign Diversity",
+      "B",
+      "Good variety in goals but limited channels used."
+    ],
+    [
+      "Audience Reach & Rotation",
+      "B",
+      "Decent reach but signs of audience fatigue."
+    ],
+    [
+      "Creative Variation",
+      "C",
+      "Limited variation in creative testing."
+    ],
+    [
+      "Performance Metrics",
+      "B",
+      "Basic metrics tracked with some drop-off analysis."
+    ]
+  ],
+  "journey_scorecard_quant_table": [
+    [
+      "Metric",
+      "Value"
+    ],
+    [
+      "Total Journeys",
+      "10"
+    ],
+    [
+      "Highest Conversion Rate",
+      "4.17%"
+    ],
+    [
+      "Average Goal Completions per Journey",
+      "2.3"
+    ]
+  ],
+  "journey_scorecard_qual_table": [
+    [
+      "Dimension",
+      "Grade",
+      "Summary Notes"
+    ],
+    [
+      "Personalization",
+      "C",
+      "Limited use of user-specific attributes and journey triggers."
+    ],
+    [
+      "Segmentation Depth",
+      "C",
+      "Journeys show inadequate segmentation strategies."
+    ],
+    [
+      "Experimentation",
+      "D",
+      "Minimal experimentation and hypothesis testing."
+    ],
+    [
+      "Campaign Diversity",
+      "B",
+      "Journeys lack diversity in channels and engagement methods."
+    ],
+    [
+      "Audience Reach & Rotation",
+      "C",
+      "Journeys affected by audience fatigue and low engagement."
+    ],
+    [
+      "Creative Variation",
+      "C",
+      "Creatives lack variation, impacting engagement."
+    ],
+    [
+      "Performance Metrics",
+      "C",
+      "Limited tracking and analysis of journey performance."
+    ]
+  ],
+  "deep_dive_personalization": {
+    "focus": "Evaluating the integration of personalization in campaigns and journeys.",
+    "grade": "B",
+    "details": [
+      "Use of user attributes: Campaigns like 'PN | 07:15 | Milk offer - JHCG | 160725' effectively used location-based attributes to personalize offers.",
+      "Behavioral triggers: Limited use of triggers; most campaigns lacked behavior-based personalization.",
+      "Journey-level dynamic routing: Journeys like 'CT_ORDER_PLACED_GIFT_JHCG_FINAL' could improve by dynamically routing based on user interactions."
+    ]
+  },
+  "deep_dive_segmentation_depth": {
+    "focus": "Analyzing the effectiveness of segmentation strategies.",
+    "grade": "C",
+    "details": [
+      "Number of active segments and their logic: Campaigns used broad 'New Segment' targeting, resulting in large audience sizes but low engagement.",
+      "Overlap between segments: Significant overlap noted, particularly in 'SMS' campaigns, diluting message relevance.",
+      "Segment-wise performance variation: 'Push' campaigns performed better with focused segments compared to 'SMS'."
+    ]
+  },
+  "deep_dive_experimentation": {
+    "focus": "Examining the structure and implementation of experiments.",
+    "grade": "D",
+    "details": [
+      "Number of experiments and their logic: Few campaigns employed A/B testing, with no significant logic variations.",
+      "Sample size and confidence levels: Sample sizes were adequate but lacked statistical rigor in determining confidence levels.",
+      "Existence of clear hypothesis: Experiments lacked clear hypotheses, reducing the ability to derive actionable insights."
+    ]
+  },
+  "deep_dive_campaign_diversity": {
+    "focus": "Understanding the variety in campaign goals and channels.",
+    "grade": "B",
+    "details": [
+      "Variety in campaign goals: Diverse goals observed in campaigns like 'PN | 07:30 | Milk offer - WB | 160725', focusing on both retention and acquisition.",
+      "Channels used: Predominantly 'Push' and 'SMS', with limited use of other channels like 'InApp' and 'WhatsApp'."
+    ]
+  },
+  "deep_dive_audience_reach_rotation": {
+    "focus": "Measuring audience engagement and exposure.",
+    "grade": "B",
+    "details": [
+      "Reach metrics: High reach but engagement varies with 'Push' channels performing better than 'SMS'.",
+      "Rotation metrics: Repetitive messaging in 'SMS' channels led to lower engagement rates.",
+      "Audience fatigue symptoms: Indicators of fatigue in segments receiving frequent messages, affecting CTR."
+    ]
+  },
+  "deep_dive_creative_variation": {
+    "focus": "Assessing the diversity and testing of creative elements.",
+    "grade": "C",
+    "details": [
+      "Variants tested: Limited variant testing, primarily text-only versus image creatives in 'Push' campaigns.",
+      "Visual vs Textual variation: Text-only creatives dominated, with minimal visual testing in 'SMS' channels.",
+      "Performance by creative type: Image creatives in 'Push' campaigns showed higher engagement than text-only."
+    ]
+  },
+  "deep_dive_performance_metrics": {
+    "focus": "Evaluating the tracking and analysis of performance metrics.",
+    "grade": "B",
+    "details": [
+      "Performance metrics tracked: Basic metrics like CTR and impressions tracked; lacked deeper insights.",
+      "Funnel drop-offs analysis: Minimal analysis on funnel drop-offs, particularly in 'InApp' campaigns."
+    ]
+  },
+  "missed_opportunities": [
+    "Improved segmentation could enhance personalization and engagement.",
+    "Increased experimentation with clear hypotheses could yield better insights.",
+    "Diversifying channels beyond 'Push' and 'SMS' to include more 'InApp' and 'WhatsApp' could widen reach.",
+    "Strengthening creative testing, especially in 'SMS' campaigns, could improve engagement."
+  ],
+  "recommendations": [
+    "Refine segmentation strategies to reduce overlap and increase message relevance.",
+    "Implement more A/B testing with defined hypotheses to guide strategic decisions.",
+    "Expand the use of visual creatives in 'SMS' campaigns to boost engagement.",
+    "Increase focus on funnel analysis to identify and address drop-off points."
+  ],
+  "campaign_agent_access": "The campaign agent can assist with configuring and optimizing future campaigns. Access it through the marketing platform’s admin settings.",
+  "campaigns_grade_breakdown_table": [
+    [
+      "Dimension",
+      "Grade",
+      "Score",
+      "Weight",
+      "Weighted Score"
+    ],
+    [
+      "Personalization",
+      "B",
+      "3",
+      "0.2",
+      "0.6"
+    ],
+    [
+      "Segmentation Depth",
+      "C",
+      "2",
+      "0.15",
+      "0.3"
+    ],
+    [
+      "Experimentation",
+      "D",
+      "1",
+      "0.1",
+      "0.1"
+    ],
+    [
+      "Campaign Diversity",
+      "B",
+      "3",
+      "0.2",
+      "0.6"
+    ],
+    [
+      "Audience Reach & Rotation",
+      "B",
+      "3",
+      "0.15",
+      "0.45"
+    ],
+    [
+      "Creative Variation",
+      "C",
+      "2",
+      "0.1",
+      "0.2"
+    ],
+    [
+      "Performance Metrics",
+      "B",
+      "3",
+      "0.1",
+      "0.3"
+    ]
+  ],
+  "journeys_grade_breakdown_table": [
+    [
+      "Dimension",
+      "Grade",
+      "Score",
+      "Weight",
+      "Weighted Score"
+    ],
+    [
+      "Personalization",
+      "C",
+      "2",
+      "0.2",
+      "0.4"
+    ],
+    [
+      "Segmentation Depth",
+      "C",
+      "2",
+      "0.15",
+      "0.3"
+    ],
+    [
+      "Experimentation",
+      "D",
+      "1",
+      "0.1",
+      "0.1"
+    ],
+    [
+      "Campaign Diversity",
+      "B",
+      "3",
+      "0.2",
+      "0.6"
+    ],
+    [
+      "Audience Reach & Rotation",
+      "C",
+      "2",
+      "0.15",
+      "0.3"
+    ],
+    [
+      "Creative Variation",
+      "C",
+      "2",
+      "0.1",
+      "0.2"
+    ],
+    [
+      "Performance Metrics",
+      "C",
+      "2",
+      "0.1",
+      "0.2"
+    ]
+  ],
+  "grade_scale_table": [
+    [
+      "Letter Grade",
+      "Score Range"
+    ],
+    [
+      "A",
+      "4.0 - 3.5"
+    ],
+    [
+      "B",
+      "3.49 - 2.5"
+    ],
+    [
+      "C",
+      "2.49 - 1.5"
+    ],
+    [
+      "D",
+      "1.49 - 0.5"
+    ],
+    [
+      "F",
+      "0.49 - 0.0"
+    ]
+  ],
+  "grade_weights_table": [
+    [
+      "Dimension",
+      "Weight"
+    ],
+    [
+      "Personalization",
+      "0.2"
+    ],
+    [
+      "Segmentation Depth",
+      "0.15"
+    ],
+    [
+      "Experimentation",
+      "0.1"
+    ],
+    [
+      "Campaign Diversity",
+      "0.2"
+    ],
+    [
+      "Audience Reach & Rotation",
+      "0.15"
+    ],
+    [
+      "Creative Variation",
+      "0.1"
+    ],
+    [
+      "Performance Metrics",
+      "0.1"
+    ]
+  ],
+  "campaign_table_rows": [
+    [
+      "Campaign Name",
+      "Date",
+      "Region",
+      "Impressions",
+      "Clicks",
+      "CTR (%)"
+    ],
+    [
+      "PN | 17:15 | CT - WB | 150725",
+      "2025-07-15",
+      "West Bengal",
+      "44,161",
+      "365",
+      "0.83"
+    ],
+    [
+      "PN | 18:30 | Milk offer - JHCG | 150725",
+      "2025-07-15",
+      "Chhattisgarh, Jharkhand",
+      "64,596",
+      "435",
+      "0.67"
+    ],
+    [
+      "PN | 18:40 | Milk offer - WB | 150725",
+      "2025-07-15",
+      "West Bengal",
+      "26,144",
+      "164",
+      "0.63"
+    ],
+    [
+      "PN | 19:30 | CT - JHCG | 150725",
+      "2025-07-15",
+      "Jharkhand, Chhattisgarh",
+      "107,259",
+      "767",
+      "0.72"
+    ],
+    [
+      "PN | 19:40 | CT - WB | 150725",
+      "2025-07-15",
+      "West Bengal",
+      "44,964",
+      "184",
+      "0.41"
+    ],
+    [
+      "PN | 20:50 | CT - WB | 150725",
+      "2025-07-15",
+      "West Bengal",
+      "44,757",
+      "297",
+      "0.66"
+    ],
+    [
+      "PN | 20:45 | CT - JHCG | 150725",
+      "2025-07-15",
+      "Jharkhand, Chhattisgarh",
+      "105,410",
+      "437",
+      "0.41"
+    ],
+    [
+      "SMS | 17:05 | CT--JH | 150725",
+      "2025-07-15",
+      "N/A",
+      "0",
+      "0",
+      "0.00"
+    ],
+    [
+      "SMS | 17:10 | CT--WB | 150725",
+      "2025-07-15",
+      "N/A",
+      "0",
+      "0",
+      "0.00"
+    ],
+    [
+      "inapp_mt_post_order_jhcg_150725",
+      "2025-07-15",
+      "N/A",
+      "0",
+      "148",
+      "0.00"
+    ],
+    [
+      "inapp_mt_post_order_wb_150725",
+      "2025-07-15",
+      "N/A",
+      "0",
+      "54",
+      "0.00"
+    ],
+    [
+      "WA | 18:40 | CT-PURCHASE-JHCG | 150725",
+      "2025-07-15",
+      "N/A",
+      "0",
+      "0",
+      "0.00"
+    ],
+    [
+      "WA | 18:50 | CT-PURCHASE-WB | 150725",
+      "2025-07-15",
+      "N/A",
+      "0",
+      "0",
+      "0.00"
+    ],
+    [
+      "PN | 07:15 | Milk offer - JHCG | 160725",
+      "2025-07-16",
+      "Chhattisgarh, Jharkhand",
+      "54,556",
+      "473",
+      "0.87"
+    ],
+    [
+      "PN | 07:30 | Milk offer - WB | 160725",
+      "2025-07-16",
+      "West Bengal",
+      "22,207",
+      "218",
+      "0.98"
+    ]
+  ],
+  "journey_table_rows": [
+    [
+      "Journey Name",
+      "Status",
+      "Start Time",
+      "Message Channel",
+      "Goal Completions",
+      "Control Group Size",
+      "Conversion Rate"
+    ],
+    [
+      "CT_ORDER_PLACED_GIFT_JHCG_FINAL",
+      "Running",
+      "Jul 22, 12:02 PM",
+      "WhatsApp",
+      "0",
+      "0",
+      "0%"
+    ],
+    [
+      "CT_ORDER_PLACED_GIFT_WB_FINAL",
+      "Running",
+      "Jul 22, 12:04 PM",
+      "WhatsApp",
+      "1",
+      "0",
+      "4.17%"
+    ],
+    [
+      "CT_PURCHASE_GIFT_JHCG_FINAL",
+      "Running",
+      "Jul 22, 1:09 PM",
+      "WhatsApp",
+      "0",
+      "0",
+      "0%"
+    ],
+    [
+      "CT_PURCHASE_GIFT_WB_FINAL",
+      "Running",
+      "Jul 22, 1:11 PM",
+      "WhatsApp",
+      "0",
+      "0",
+      "0%"
+    ],
+    [
+      "First order delivered_intertitial_JHCGWB_v2",
+      "Running",
+      "Jul 21, 11:41 AM",
+      null,
+      "2",
+      "126",
+      "0.16%"
+    ],
+    [
+      "SecondOrderDelivered_intertitial_JHCGWB_v2",
+      "Running",
+      "Jul 21, 11:41 AM",
+      null,
+      "20",
+      "112",
+      "1.98%"
+    ],
+    [
+      "FTU_SA_Drop_off_JHCG_v2",
+      "Draft",
+      "-",
+      null,
+      "0",
+      "0",
+      "-%"
+    ],
+    [
+      "CT_Purchase_WA_JHCG_220725",
+      "Stopped",
+      "Jul 22, 10:43 AM",
+      "WhatsApp",
+      "0",
+      "0",
+      "0%"
+    ],
+    [
+      "CT_Purchase_WA_JHCG_Final_220725",
+      "Stopped",
+      "Jul 22, 10:44 AM",
+      "WhatsApp",
+      "0",
+      "0",
+      "0%"
+    ],
+    [
+      "Clone of CT_Purchase_WA_JHCG_Final_220725",
+      "Stopped",
+      "Jul 22, 11:14 AM",
+      "WhatsApp",
+      "0",
+      "0",
+      "0%"
+    ]
+  ]
+}

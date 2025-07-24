@@ -14,127 +14,182 @@ def load_summary_data(path='summary_data.json'):
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+def build_campaigns_summary_block(summary_data):
+    campaigns = summary_data["campaigns"]
+    data = []
+    for c in campaigns:
+        impressions = 0
+        clicks = 0
+        ctr = 0.0
+        # Sum across all channels for impressions and clicks
+        if "channels" in c:
+            for ch in c["channels"]:
+                impressions += ch.get("impressions", 0) or 0
+                clicks += ch.get("clicked", 0) or 0
+        # Calculate CTR (avoid division by zero)
+        ctr = (clicks / impressions * 100) if impressions > 0 else 0.0
+        data.append([
+            c.get("campaign_name"),
+            c.get("date_sent"),
+            c.get("region") or "N/A",
+            impressions,
+            clicks,
+            f"{ctr:.2f}"
+        ])
+    return {
+        "type": "table",
+        "title": "Campaign Dataset Summary for all campaigns",
+        "columns": ["Campaign Name", "Date", "Region", "Impressions", "Clicks", "CTR (%)"],
+        "data": data
+    }
+
+def build_journeys_summary_block(summary_data):
+    journeys = summary_data["journeys"]
+    data = []
+    for j in journeys:
+        data.append([
+            j.get("journey_name"),
+            j.get("status"),
+            j.get("start_time"),
+            j.get("message_channel") or "N/A",
+            j.get("goal_completions"),
+            j.get("control_group_size"),
+            j.get("conversion_rate")
+        ])
+    return {
+        "type": "table",
+        "title": "Journey Dataset Summary for all journeys",
+        "columns": ["Journey Name", "Status", "Start Time", "Message Channel", "Goal Completions", "Control Group Size", "Conversion Rate"],
+        "data": data
+    }
+
 def build_system_prompt():
     return '''
-You are a structured reporting agent responsible for generating a campaign effectiveness report in JSON block format. Each block must conform to one of the following schemas:
+You are a structured reporting agent responsible for generating a marketing campaign effectiveness report. Your output must be a single JSON object, where each key corresponds to a specific section or placeholder in the report template. Do NOT output a list of blocks. Do NOT include any headings or section titles in the values unless specifically required by the instructions below.
 
-Block Format Types:
+For each key, provide the required content as follows:
 
-{"type": "text", "content": "markdown-compatible summary or heading"}
+---
 
-{"type": "table", "title": "title", "columns": [string], "data": [[values]]}
+**Text/Narrative Sections:**
+- Output as plain text (no markdown headings).
+- For all deep dive dimension keys (keys starting with "deep_dive_"), output a JSON object with the following keys:
+    - focus: string (what is being analyzed for this dimension)
+    - grade: string (the grade for this dimension)
+    - details: list of strings. Each string must start with the required bullet heading (see below), followed by a colon and the LLM-generated analysis for that bullet. The LLM must use concrete campaign/journey examples and provide actionable, factual, and insight-driven analysis for each bullet. Do NOT use generic praise or marketing jargon.
+- For "missed_opportunities" and "recommendations", output a list of strings. Each string should be a single bullet/point/statement (not a paragraph or markdown). Do NOT output a single string or markdown list—output a JSON list of strings.
+- For other narrative keys, output as plain text.
 
-{"type": "chart", "title": "title", "chart_type": "bar"|"line", "x_axis": "label", "y_axis": "label", "data": [{"x": label, "y": number}]}
+**Tables:**
+- Output as a list of rows (list of lists), with the first row being the column headers.
+- Do NOT include the table title or any extra rows.
 
-Instructions:
+**Highlights/Boxes:**
+- Output as a list of strings (each string is a highlight or metric to be rendered as a card/box).
 
-You will receive pre-processed marketing campaign data including metrics like impressions, clicks, CTR, segment information, creative metadata, and error breakdowns. Based on this data, your task is to output a full campaign effectiveness report as a structured array of blocks.
+---
 
-Your response must exactly follow the structure and content outline below:
+**Required Keys and Content:**
 
-Section 1: Executive Summary
+- "executive_summary": 2–3 paragraphs summarizing both campaign and journey performance, referencing total campaigns, total journeys, key highlights, and both campaign and journey grades. Be factual, actionable, and insight-driven.
+- "time_frame": The time frame over which the report is being generated (e.g., "15 Jul 2025 - 16 Jul 2025").
+- "key_highlights_boxes": List of 5–8 key highlights (e.g., overall CTR, top campaign, top journey, overall grade, journey grade, etc.).
+- "campaign_scorecard_quant_table": Table rows for the Campaign Scorecard (Quantitative Overview). Columns: ["Metric", "Value"].
+- "campaign_scorecard_qual_table": Table rows for the Campaign Scorecard (Qualitative Dimensions). Columns: ["Dimension", "Grade", "Summary Notes"].
+- "journey_scorecard_quant_table": Table rows for the Journey Scorecard (Quantitative Overview). Columns: ["Metric", "Value"].
+- "journey_scorecard_qual_table": Table rows for the Journey Scorecard (Qualitative Dimensions). Columns: ["Dimension", "Grade", "Summary Notes"].
+- Note: the dimensions for the qualitative tables must be the same as the dimensions in the deep dive section.
 
-One text block with H2 heading: ## Executive Summary
+- For each deep dive key, use the following required bullet headings for the details list. The LLM must generate the analysis for each bullet, starting with the heading and a colon:
+- For each deep dive details make sure to include concrete campaign/journey examples. The examples need to showcase how the dimension sub-heading is being used in the campaign/journey and how it can be improved.
+- "deep_dive_personalization": {
+    "focus": "Evaluating the integration of personalization in campaigns and journeys.",
+    "grade": string,
+    "details": [
+      "Use of user attributes: ",
+      "Behavioral triggers: ",
+      "Journey-level dynamic routing:"
+    ]
+  }
 
-One text block with 2–3 paragraph narrative
+- "deep_dive_segmentation_depth": {
+    "focus": "Analyzing the effectiveness of segmentation strategies.",
+    "grade": string,
+    "details": [
+      "Number of active segments and their logic:",
+      "Overlap between segments:",
+      "Segment-wise performance variation:"
+    ]
+  }
 
-One text block with bullet points showing overall highlights (CTR, top campaign, overall grade, etc.)
+- "deep_dive_experimentation": {
+    "focus": "Examining the structure and implementation of experiments.",
+    "grade": string,
+    "details": [
+      "Number of experiments and their logic:",
+      "Sample size and confidence levels:",
+      "Existence of clear hypothesis:"
+    ]
+  }
 
-Section 2: Scorecard Summary
+- "deep_dive_campaign_diversity": {
+    "focus": "Understanding the variety in campaign goals and channels.",
+    "grade": string,
+    "details": [
+      "Variety in campaign goals:",
+      "Channels used:"
+    ]
+  }
 
-One table block titled: Campaign Scorecard (Qualitative Dimensions)
+- "deep_dive_audience_reach_rotation": {
+    "focus": "Measuring audience engagement and exposure.",
+    "grade": string,
+    "details": [
+      "Reach metrics:",
+      "Rotation metrics:",
+      "Audience fatigue symptoms:"
+    ]
+  }
 
-Columns: ["Dimension", "Grade", "Summary Notes"]
+- "deep_dive_creative_variation": {
+    "focus": "Assessing the diversity and testing of creative elements.",
+    "grade": string,
+    "details": [
+      "Variants tested:",
+      "Visual vs Textual variation:",
+      "Performance by creative type:"
+    ]
+  }
 
-One table block titled: Campaign Scorecard (Quantitative Overview)
+- "deep_dive_performance_metrics": {
+    "focus": "Evaluating the tracking and analysis of performance metrics.",
+    "grade": string,
+    "details": [
+      "Performance metrics tracked:",
+      "Funnel drop-offs analysis:"
+    ]
+  }
 
-Columns: ["Metric", "Value"]
+- "missed_opportunities": List of strings. Each string is a bullet/point for a missed opportunity for both campaigns and journeys. Each bullet should reference a specific area and why it matters.
+- "recommendations": List of strings. Each string is a bullet/point for a tactical recommendation for both campaigns and journeys. Each bullet should reference a specific area and a concrete action item.
+- "campaign_agent_access": 1–2 sentences describing what the campaign agent can do and how to access it (keep subtle & utility-focused).
+- "campaigns_grade_breakdown_table": Table rows for Campaigns Grade Computation Breakdown. Columns: ["Dimension", "Grade", "Score", "Weight", "Weighted Score"].
+- "journeys_grade_breakdown_table": Table rows for Journeys Grade Computation Breakdown. Columns: ["Dimension", "Grade", "Score", "Weight", "Weighted Score"].
+- "grade_scale_table": Table rows for Grade Scale. Columns: ["Letter Grade", "Score Range"].
+- "grade_weights_table": Table rows for Grade Weights. Columns: ["Dimension", "Weight"].
+- "campaign_table_rows": Table rows for Campaign Dataset Summary for all campaigns. Columns: ["Campaign Name", "Date", "Region", "Impressions", "Clicks", "CTR (%)"]. Note all campaigns must be displayed in the table.
+- "journey_table_rows": Table rows for Journey Dataset Summary for all journeys. Columns: ["Journey Name", "Status", "Start Time", "Message Channel", "Goal Completions", "Control Group Size", "Conversion Rate"]. Note all journeys must be displayed in the table.
 
-Example rows: ["Total Campaigns", "6"], ["Total Audience", "420,000+"], ["Avg CTR", "0.63%"], etc.
+---
 
-One table block titled: Grade Computation Breakdown
-
-Columns: ["Dimension", "Grade", "Score", "Weight", "Weighted Score"]
-
-Include total score & overall grade row.
-
-Section 3: Deep Dive by Dimension
-
-For each dimension below, include:
-
-One text block with H3 heading: e.g. ### Personalization
-
-One text block with paragraph analysis (1–2 paragraphs)
-
-One table block if appropriate (e.g. creative variation, personalization elements)
-
-One chart block if it adds value (e.g. CTR by audience segment)
-
-Dimensions:
-
-Personalization
-
-Segmentation Depth
-
-Experimentation
-
-Campaign Diversity
-
-Audience Reach / Rotation
-
-Creative Variation
-
-Performance Metrics
-
-Section 4: Missed Opportunities & Recommendations
-
-One table block titled Missed Opportunities
-
-Columns: ["Area", "Why It Matters"]
-
-One table block titled Tactical Recommendations
-
-Columns: ["Area", "Action Item"]
-
-One text block with paragraph: e.g. Niti AI can help implement these recommendations through agent-based automation, without adding operational load.
-
-Section 5: CTA / Campaign Assistant
-
-One text block with heading: ## Campaign Assistant Access
-
-One text block describing what the assistant can do and how to access it (keep subtle & utility-focused)
-
-Section 6: Appendix
-
-One table block titled Campaign Dataset Summary
-
-Columns: ["Campaign Name", "Date", "Region", "Impressions", "Clicks", "CTR (%)", "Headline", "Text"]
-
-One text block titled Grading Methodology
-
-One table block titled Grade Scale
-
-Columns: ["Letter Grade", "Score Range"]
-
-One table block titled Grade Weights
-
-Columns: ["Dimension", "Weight"]
-
-Constraints:
-
-Do not use marketing jargon or generic praise. Be factual, actionable, and insight-driven.
-
-Do not include outer JSON structure — output should be a flat list of JSON block objects.
-
-Ensure all blocks are valid and correctly structured (e.g. no nested objects inside data arrays).
-
-All percentages must be rendered with 2 decimal places.
-
-Ensure campaign names and rows are aligned with actual input data.
-
-Output Format:
-
-Your output must be a valid single JSON array (list) of objects using only the approved block types. This format is directly rendered into PDF via markdown templating. Do not include commentary, YAML, or markdown outside the block structures.
+**General Instructions:**
+- Do NOT include any outer JSON structure, YAML, or markdown outside the JSON object.
+- Do NOT include commentary or explanations outside the required fields.
+- All percentages must be rendered with 2 decimal places.
+- Ensure campaign and journey names and rows are aligned with actual input data.
+- Be factual, actionable, and insight-driven. Do not use marketing jargon or generic praise.
+- Use concrete campaign and journey examples wherever possible.
+- Your output must be a valid single JSON object with all required keys.
 '''
 
 def build_prompt(summary_data):
@@ -143,7 +198,7 @@ DATA:
 {json.dumps(summary_data, indent=2)}
 """
 
-def call_openai(prompt, model="gpt-4o", temperature=0.2, max_tokens=3000):
+def call_openai(prompt, model="gpt-4o", temperature=0.7, max_tokens=8192):
     api_key = load_api_key()
     client = openai.OpenAI(api_key=api_key)
     system_prompt = build_system_prompt()
@@ -181,23 +236,20 @@ if __name__ == '__main__':
         raise ValueError("LLM output is None!")
     if not isinstance(llm_output, str):
         llm_output = str(llm_output)
-    # Parse the output robustly
+    # Remove code block markers if present
+    llm_output = llm_output.strip()
+    if llm_output.startswith('```json'):
+        llm_output = llm_output[len('```json'):].strip()
+    if llm_output.startswith('```'):
+        llm_output = llm_output[len('```'):].strip()
+    if llm_output.endswith('```'):
+        llm_output = llm_output[:-3].strip()
     try:
-        blocks = parse_llm_blocks(llm_output)
+        llm_json = json.loads(llm_output)
     except Exception as e:
         print("Error parsing LLM output as JSON:", e)
         print("Raw output was:\n", llm_output)
         raise
-    # Static blocks
-    executive_summary_block = {
-        "type": "text",
-        "content": "## Executive Summary\n\nThis report analyzes campaign performance, engagement, and delivery for the selected period. It includes campaign-by-campaign analysis, aggregate trends, and a grading rubric for actionable insights."
-    }
-    grading_rubric_block = {
-        "type": "text",
-        "content": "### Grading Rubric\n- **A**: CTR ≥ 1.0% — Excellent engagement\n- **B**: CTR ≥ 0.7% — Good performance\n- **C**: CTR ≥ 0.4% — Average\n- **D**: CTR ≥ 0.2% — Below average\n- **F**: CTR < 0.2% — Poor engagement"
-    }
-    final_blocks = [executive_summary_block, grading_rubric_block] + blocks
-    with open('final_report_blocks.json', 'w', encoding='utf-8') as f:
-        json.dump(final_blocks, f, ensure_ascii=False, indent=2)
-    print("Final report blocks (with summary and rubric) saved to final_report_blocks.json") 
+    with open('llm_output.json', 'w', encoding='utf-8') as f:
+        json.dump(llm_json, f, ensure_ascii=False, indent=2)
+    print("LLM output saved to llm_output.json") 

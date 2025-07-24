@@ -17,6 +17,30 @@ def epoch_to_iso(epoch):
     except Exception:
         return None
 
+def extract_region_from_target(target):
+    def find_region_in_query(query):
+        arrs = safe_get(query, ['wc', 'arr'], [])
+        if arrs and isinstance(arrs, list):
+            for arr_item in arrs:
+                subarrs = arr_item.get('arr', [])
+                for subarr in subarrs:
+                    e_list = subarr.get('e', [])
+                    for e in e_list:
+                        if e.get('k') == 7:
+                            v = e.get('v', [])
+                            if v:
+                                # Return all regions as comma-separated string
+                                return ', '.join(str(region) for region in v if region)
+        return None
+
+    # Try 'q', then 'qm', then any other likely query fields
+    for key in ['q', 'qm']:
+        query = target.get(key, {})
+        region = find_region_in_query(query)
+        if region:
+            return region
+    return 'N/A'
+
 def prepare_summary_data(df):
     # Add computed columns
     df['CTR'] = np.where(df['impressions'] > 0, df['clicked'] / df['impressions'] * 100, 0)
@@ -46,11 +70,12 @@ def prepare_summary_data(df):
         target = safe_get(c, ['data', 'response', 'target'], {})
         campaign_id = target.get('_id') or c.get('campaign_id')
         # Metadata fields
+        region = extract_region_from_target(target)
         campaign_meta[campaign_id] = {
             'campaign_id': campaign_id,
             'campaign_name': target.get('name'),
             'date_sent': epoch_to_iso(target.get('startEpoch')),
-            'region': safe_get(target, ['q', 'wc', 'arr', 0, 'arr', 0, 'e', 0, 'v', 0]),
+            'region': region,
             'segment_id': safe_get(target, ['qm', 'segmentId']),
             'segment_name': safe_get(target, ['qm', 'segmentName']),
             'language': None,  # Not present
@@ -127,6 +152,64 @@ def prepare_summary_data(df):
         'ctr_by_campaign': ctr_by_campaign,
         'error_breakdown': error_breakdown
     }
+
+    # --- Journey summary logic ---
+    import os
+    journey_file = 'journey_details.json'
+    journeys = []
+    total_journeys = 0
+    if os.path.exists(journey_file):
+        with open(journey_file, 'r', encoding='utf-8') as jf:
+            journey_data = json.load(jf)
+        # Handle both dict and list top-level structures
+        if isinstance(journey_data, dict):
+            roots = journey_data.get('root', [])
+        elif isinstance(journey_data, list):
+            roots = journey_data
+        else:
+            roots = []
+        journeys = []
+        for journey in roots:
+            # Handle both dict and list journey structures
+            journey_data_dict = journey.get('data', journey) if isinstance(journey, dict) else journey
+            root_list = journey_data_dict.get('root', []) if isinstance(journey_data_dict, dict) else []
+            cg_stats = journey_data_dict.get('cg_stats', {}) if isinstance(journey_data_dict, dict) else {}
+            exit_stats = journey_data_dict.get('exit_stats', {}) if isinstance(journey_data_dict, dict) else {}
+            if root_list:
+                path = root_list[0].get('path', {})
+            else:
+                path = {}
+            journey_summary = {
+                "journey_name": cg_stats.get("name"),
+                "status": cg_stats.get("status"),
+                "start_time": cg_stats.get("startTime"),
+                "qualified_users": path.get("segment_action", {}).get("stats", {}).get("qualified", 0),
+                "not_qualified": path.get("segment_action", {}).get("stats", {}).get("not_qualified", 0),
+                "message_channel": "WhatsApp" if "message_whatsapp" in path else None,
+                "message_sent": path.get("message_whatsapp", {}).get("stats", {}).get("sent", 0),
+                "message_delivered": path.get("message_whatsapp", {}).get("stats", {}).get("delivered", 0),
+                "message_viewed": path.get("message_whatsapp", {}).get("stats", {}).get("viewed", 0),
+                "message_clicked": path.get("message_whatsapp", {}).get("stats", {}).get("clicked", 0),
+                "goal_completions": 0,
+                "control_group_size": path.get("segment_action", {}).get("stats", {}).get("control_group", 0),
+                "conversion_count": cg_stats.get("conversionCount", 0),
+                "conversion_rate": f"{cg_stats.get('conversion', '0')}%"
+            }
+            # Goal completions: try to extract from exit_stats
+            try:
+                goal_cnt = 0
+                if "goal" in exit_stats:
+                    for g in exit_stats["goal"].values():
+                        for step in g.values():
+                            goal_cnt += step.get("cnt", 0)
+                journey_summary["goal_completions"] = goal_cnt
+            except Exception:
+                pass
+            journeys.append(journey_summary)
+        total_journeys = len(journeys)
+    summary_data['journeys'] = journeys
+    summary_data['overall']['total_journeys'] = total_journeys
+    # --- End journey summary logic ---
     return summary_data
 
 if __name__ == '__main__':
